@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7" lang="en-us"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie10 lt-ie9 lt-ie8" lang="en-us"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie10 lt-ie9" lang="en-us"> <![endif]-->
+<!--[if IE 9]> <html class="no-js lt-ie10 lt-ie9" lang="en-us"> <![endif]-->
+<!--[if lt IE 10]> <html class="no-js lt-ie10" lang="en-us"> <![endif]-->
+<!--[if !IE]> > <![endif]-->
+<html lang='en' ng-app='app'>
+  <!-- <![endif] -->
+  <head>
+    <title>We are Lab, a new breed of design/dev studio</title>
+    <meta charset='utf-8' content='text/html' http-equiv='content-type'>
+    <meta content='ie=edge,chrome=1' http-equiv='x-ua-compatible'>
+    <meta content='' name='description'>
+    <meta content='' name='author'>
+    <meta content='initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width' name='viewport'>
+    <meta content='initial-scale=1.0,user-scalable=no,maximum-scale=1' media='(device-height: 568px)' name='viewport'>
+    <meta content='yes' name='apple-mobile-web-app-capable'>
+    <meta content='black-translucent' name='apple-mobile-web-app-status-bar-style'>
+    <link href='/images/favicon/apple-touch-icon.png' rel='apple-touch-icon' sizes='120x120'>
+    <link href='/images/favicon/favicon-32x32.png' rel='icon' sizes='32x32' type='image/png'>
+    <link href='/images/favicon/favicon-16x16.png' rel='icon' sizes='16x16' type='image/png'>
+    <link href='/images/favicon/manifest.json' rel='manifest'>
+    <link color='#5bbad5' href='/images/favicon/safari-pinned-tab.svg' rel='mask-icon'>
+    <link href='/images/favicon/favicon.ico' rel='shortcut icon'>
+    <meta content='/images/favicon/browserconfig.xml' name='msapplication-config'>
+    <meta content='#ffffff' name='theme-color'>
+    <link href="stylesheets/application.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body class='' ng-controller='AppController'>
+    <div class='page-change' ui-view></div>
+    <script type="text/ng-template" id="appleKeyboard.html"><section class='section'>
+      <div class='back-wrap'>
+        <div class='back' ng-click='root.back()'>
+          <img src="images/icons/back.png" />
+          <span>BACK</span>
+        </div>
+      </div>
+      <h1>What the F⌃⇧⌥, Apple?</h1>
+      <p>Maybe I'm the only special snowflake that gets confused by symbols. Maybe everyone else has got this fancy thing called the keyboard figured out. But I hope I'm not the only one that gets irrationally frustrated when I see ⌃⇧⌥. And I hope I'm not the only one that starts hitting shift, control, and alt until it works. Of course, in the same way that plugging in a USB always requires 4 or 5 tries.</p>
+    </section>
+    <div class='section'>
+      <p>Let's take a look at the Apple keyboard.</p>
+      <div class='image'>
+        <img src="images/blog/appleKeyboard/keyboard_keys.png" />
+      </div>
+      <p>
+        Specifically, let's take a look at the 4 magical buttons in the bottom left corner (shift, control, option, command). What could possibly be hard about these keys? It's true, I have no problem pressing
+        <strong>command+C</strong>
+        or
+        <strong>shift+command+T</strong>
+        or
+        <strong>alt+control+A.</strong>
+        In fact, as long as I specifically think of the keys as the words shift, control, option, command, I can do it.
+      </p>
+    </div>
+    <div class='section'>
+      <p>However, any shortcut I don't remember, everything breaks down.</p>
+      <div class='keys'>
+        <span>⌃⇧⌥⌘</span>
+      </div>
+      <div class='label'>Easy, press all the 4 buttons</div>
+      <div class='keys'>
+        <span>⌃⇧⌥</span>
+      </div>
+      <div class='label'>Easy, press the 3 buttons that aren't ⌘</div>
+      <div class='keys'>
+        <span>⌃⇧</span>
+      </div>
+      <div class='label'>Um, one of them is shift?</div>
+      <div class='keys'>
+        <span>⌃</span>
+      </div>
+      <div class='label'>Oh, that's shift, right?</div>
+      <div class='keys'>
+        <span>⇧</span>
+      </div>
+      <div class='label'>Wait, no, this one is shift?</div>
+      <div class='keys'>
+        <span>⌥</span>
+      </div>
+      <div class='label'>Maybe this one is shift too?</div>
+      <div class='keys'>
+        <span>⌃⌥</span>
+      </div>
+      <div class='label'>I don't know</div>
+      <div class='keys'>
+        <span>⇧⌥</span>
+      </div>
+      <div class='label'>Please stop, I'll just press buttons until they work</div>
+    </div>
+    <div class='section'>
+      <p>Shift is confusing. Let's play word association.</p>
+      <p>
+        <strong>Shift</strong>
+        Up. Higher. Above.
+      </p>
+      <p>
+        <strong>⌃</strong>
+        Caret. Raise to power. Up. Oh, it's shift!
+      </p>
+      <p>
+        <strong>⇧</strong>
+        Up. Definitely shift!
+      </p>
+      <p>
+        <strong>⌥</strong>
+        That's not actual symbol, stop making stuff up. It is? A thing above another thing? Could be anything. Is it shift?
+      </p>
+      <p>
+        <strong>Control, Alt, Option</strong>
+        I don't know
+      </p>
+      <p>
+        <strong>Command</strong>
+        That weird symbol. Oh it's on my keyboard, it's ⌘
+      </p>
+      <p>
+        <strong>⌘</strong>
+        It's that weird symbol. Oh it's on my keyboard, it's command
+      </p>
+    </div>
+    <div class='section'>
+      <div class='image'>
+        <img src="images/blog/appleKeyboard/brain.png" />
+      </div>
+      <p>So, what the F⌃⇧⌥, Apple? I associate all these weird symbols with shift. I associate ⌃, ⇧ directly with shift and ⌥ by process of elimination. I don't associate control or option with any symbol. And that exactly causes my confusion.</p>
+      <p>Yes, I could look up the symbols online, click around, convert the symbols to the words, look on my keyboard and click the right combination. But I have a better solution: click buttons until something works, start swearing when it inevitably doesn't, give up and just use the mouse.</p>
+    </div>
+    <div class='section'>
+      <h5>Possible solution</h5>
+      <div class='image'>
+        <img src="images/blog/appleKeyboard/solution1.png" />
+      </div>
+      <p>Oh no, that won't do. So much uglier. So much more clutter. But definitely clearer.</p>
+    </div>
+    <div class='section'>
+      <h5>
+        Let's remove
+        <strong>alt.</strong>
+        it serves no purpose anymore.
+      </h5>
+      <div class='image'>
+        <img src="images/blog/appleKeyboard/solution2.png" />
+      </div>
+      <p>
+        Slightly better. Modern software knows to use the word
+        <strong>option</strong>
+        instead of
+        <strong>alt</strong>
+        on macs. But. Still too much clutter. Stil ugly.
+      </p>
+    </div>
+    <div class='section'>
+      <h5>
+        Let's remove
+        <strong>⌃⌥.</strong>
+      </h5>
+      <div class='image'>
+        <img src="images/blog/appleKeyboard/solution3.png" />
+      </div>
+      <p>Better looking, but I don't associate control or option with anything, so I'll be equally angry</p>
+    </div>
+    <div class='section'>
+      <h5>
+        Let's remove
+        <strong>⇧.</strong>
+      </h5>
+      <div class='image'>
+        <img src="images/blog/appleKeyboard/solution4.png" />
+      </div>
+      <p>Better looking and clear. I know that control=⌃ option=⌥. So shift must be ⇧.</p>
+    </div>
+    <div class='section'>
+      <p>Let's bring back the original keyboard and see what it looks like.</p>
+      <div class='image'>
+        <img src="images/blog/appleKeyboard/keyboard_solution.png" />
+      </div>
+      <p>
+        <strong>Aesthetically</strong>
+        &mdash; equivalent.
+        <strong>Functionally</strong>
+        &mdash; infinitely superior.
+      </p>
+    </div>
+    <div class='section'>
+      <p>Hopefully someone knows where Jony Ive's white room is. And hopefully it has internet. #fixKeyboard</p>
+    </div>
+    <footer>
+      <p>Copyright &copy; 2015 LabLabLab</p>
+    </footer>
+    </script><script type="text/ng-template" id="days.html"><section>
+      <div class='back-wrap'>
+        <div class='back' ng-click='root.back()'>
+          <img src="images/icons/back.png" />
+          <span>BACK</span>
+        </div>
+      </div>
+      <h1>Product Design Sprints</h1>
+      <p>When you work with Lab, you don't get charged lots of overhead for coordination. We stay small, lean, and effective.  That also means that we don't have the capacity to take on tons of clients at a time. It's just you. We'll focus like a laser guided spotlight on your problems and design solutions to set you out on the right foot with the market and with investors.</p>
+      <h2>How are we able to do this?</h2>
+      <p>Because we’re a different kind of consulting firm. Unlike many in the industry, we don’t invent things to bill you for. We want to have the most impact, as soon as possible, and then let you run your business the way you set out to. If a certain module is error prone or needs to be tested particularly well, we’ll pair program, or suggest that we put rigorous tests in place. But when you’re trying to prototype or validate that something works, we eschew all of the "overhead" protocol and superfluous process steps in exchange for speed.</p>
+      <p>We use a tool called <a href="http://trello.com">Trello</a> to map this entire process.   We have a custom Trello board, only open to our clients, that have full transparency into the steps of our process and what we are doing at any particular time for you.  Whenever you have questions about the process, you can always refer to the comprehensive trello board and find the answers you need.</p>
+      <p>When you're working on something new, there are infinite options for what your new thing might be, let alone how it will act, or what it might look like. We'll work closely with you, and as many of your early users, to help you identify the options with the most likelihood of succeeding in short order.</p>
+      <h2>How do we do it?</h2>
+      <p>We'll work with you to identify a small, workable slice of functionality that we'll test with actual users in order to get feedback.</p>
+      <p>We call it a design / dev sprint.   When we work, we like to deliver a meaningful chunk that can be testable, and built upon within a week.   While the week doesn’t always perfectly coincide with these days, it’s a rough proxy for the steps that we’ll take to work with you.</p>
+      <h6 id='1' scroll-id='p'>Day 1:  Information Gathering and Sketching with Stakeholders</h6>
+      <ul>
+        <li>The first thing we’ll do in the project is cocreate a goal for 1) what we’ll build and 2) what we’ll launch.   We’ll identify where best to launch it, who to launch it with, and the result that we’re trying to achieve.  During this time, our language will resemble that of an experiment, with hypotheses, sample sizes, and control variables.</li>
+        <li>We’ll conduct very rapid user research to get the high level points for the feature you’re trying to build.</li>
+        <li>To the extent that you’ve already done research, we’ll use this time to understand everything you have about your target market and launch.</li>
+        <li>At the end of 6 working days, if we’re working towards a public launch, we’ll help you identify how to leverage any press or advantages you might get from the the launch event.</li>
+      </ul>
+      <div class='image'>
+        <img src="images/process/sketches.jpg" />
+      </div>
+      <h6 id='2' scroll-id='p'>Day 2:  UX Flows</h6>
+      <ul>
+        <li>We’ll formalize any of the sketches done the first day and put together what we think the customer experience journey might look like.</li>
+        <li>We’ll map phases of the customer or user journey to screens or app “steps” that the user might encounter when they use your product.  By no means will this be exhaustive.   It’s just intended to give us an outline to work with, and hit the high level points we want users to see.   In some cases, this will include what we call a 1UX or First-time-user-experience (FTUE).   For many products, we’re big proponents of optimizing the 1UX.</li>
+        <li>After your work day is done, we’ll go back and work through your UX flow and memorialize it in a digital document that we can both work through.</li>
+      </ul>
+      <div class='image'>
+        <img src="images/process/flow.jpg" />
+      </div>
+      <h6 id='3' scroll-id='p'>Day 3: Confirm UX flows, UI Design</h6>
+      <ul>
+        <li>In the morning, we will review the UX flow document and make sure that we’re all on board that it’s the most important thing to develop on.</li>
+        <li>In parallel, we’ll start designing any data model that we’ll need to support this feature.   Most of the time, data models are very specific to the customer, and even the feature that you’re working on, so rest assured we’ll delve into the details on this with you to help you understand them.  Your input on the hypothesis and what you’d like to track is important during this period.</li>
+        <li>In the afternoon and evening, we’ll get through many revisions and iterations of a UI structure that will work for your application.</li>
+      </ul>
+      <div class='image'>
+        <img src="images/process/dev.jpg" />
+      </div>
+      <h6 id='4' scroll-id='p'>Day 4:  Development</h6>
+      <ul>
+        <li>In the AM, we’ll review the design iterations of the UI/UX for your feature.</li>
+        <li>The rest of the time will go towards implementing quickly the minimum viable/desirable product we've defined with you.</li>
+      </ul>
+      <h6 id='5' scroll-id='p'>Day 5: Continue Development</h6>
+      <ul>
+        <li>Heavy development day. Today, we’ll mostly be heads down, and won’t have much time to interact with users or our client.</li>
+      </ul>
+      <div class='image'>
+        <img src="images/process/polish.jpg" />
+      </div>
+      <h6 id='6' scroll-id='p'>Day 6: Feedback + Polish</h6>
+      <p>After we deliver it to you (This is next week, on Monday)</p>
+      <p>Final day of development and putting polish on the site.   On this day, we’ll try to get feedback early on and see what we might be able to adjust realtime before getting the feature or site to a place where it can be “launched” - Depending on what you, our client, chose as a “launch”.</p>
+      <h6>Launch Day</h6>
+      <p>We instrument your feature thoroughly (meaning we'll add the analytics and customer communication tools we prefer using), and will spend time explaining these metrics to make further decisions.   You can take this feedback, and continue to work with us to spec and build out the next feature, until you’ve iterated to a successful product you are happy with.</p>
+      <!-- %p (Mention Google analytics, intercom, mixpanel, etc? - Or should we move this to the tech section) -->
+      <!-- %p (move this somewhere else - figure out where to put it) -->
+      <h6>Fundraising</h6>
+      <p>Startups don't have the luxury of projects being funded like established companies might.  We work with both startups and established companies, so we understand the constraints of both.</p>
+      <p><strong>Startups</strong>:  The fundraising climate is very different today than it has been in decades past.   With platforms like Kickstarter or Indiegogo (that can help you validate your concept with early evangelists) to seed funding through angel syndicates, its not hard to get started with the right amount of funding to undergo some important tests to see if people want what you’re building.</p>
+    </section>
+    </script><script type="text/ng-template" id="deployButton.html"><section>
+      <div class='back-wrap'>
+        <div class='back' ng-click='root.back()'>
+          <img src="images/icons/back.png" />
+          <span>BACK</span>
+        </div>
+      </div>
+      <h1>Deploy Button</h1>
+      <p>DeployButton is a simple idea built for a previous <a href="http://railsrumble.com/">RailsRumble</a> (the internationally recognized Ruby on Rails hackathon).  Deploying code to a web server, while important, has become a chore that only technical people can undertake.  As teams grow and require more product managers who might not be technical, the interface to deploy can’t only exist in a command line.  And even if you’re technical, it’s nice to be able to press a single button to make your code “live” on a webserver.</p>
+      <p>The whole idea for <a href="http://deploybtn.herokuapp.com">DeployButton</a> came into being while we were working on another project that used <a href="https://docs.chef.io/chef_overview.html">Chef</a> to manage servers and govern the deployment process.  While the set up was magnificent, it quickly got to the point where deploys were more complicated than they needed to be.</p>
+      <p>For the hackathon, we wanted to simplify our idea as much as possible and release something to see if there were other people who needed what we were building as much as we did.  We firmly believed that people get attached to products more when they can try them out instantly without exchanging their email address or offering up any other personal information.   It’s almost as if there’s an lurker / anonymity wall where people want to explore facets of the product without revealing their identity.  We understood this and sought to strike the perfect balance with DeployButton.</p>
+      <h2>Before the hackathon</h2>
+      <p>Prior to any coding, we stood up and decided what the overall workflow for an app might look like.   Iteration after iteration, we drew what we thought might produce a "<a href="https://medium.com/@glusman/on-second-thought-periscope-is-kind-of-interesting-d1610d4eb0ae">magic moment</a>" for users to get them to keep coming back.  Eventually, we figured out the simplest thing that someone could do was both consistent for power users, and intuitive for 1st time users.  We hid all of the settings, bells and whistles, and extra features of the product and we let the main "spotlight" feature shine through on the first engagement:  Deploying your site in less than 10 seconds.</p>
+    </section>
+    <section>
+      <div class='image'>
+        <img src="images/projects/deploybutton/sketch.jpg" />
+      </div>
+    </section>
+    <section>
+      <div class='image'>
+        <img src="images/projects/deploybutton/sitemap.jpg" />
+      </div>
+      <h2>Wireframing</h2>
+      <p>At this point, we had a high level vision for what we were trying to achieve: an experience that people would come to, try, and instnalty grasp that they could deploy <em>their specific code</em> using our product.  This is an important distinction, because many times people refuse to try products because they think they have some weird, special configuration that is unique to them.  We wanted to help people understand that there were other people who were deploying with similar configurations, and it would <em>actually work</em>.  When the hackathon started, we began adding structure and providing depth to the "bones" of the app.</p>
+      <h2>Building the app</h2>
+      <p>Halfway through the weekend, we concluded that we couldn't actually build everything we wanted to for DeployButton.  The actual <strong>DeployButton wasn't going to be able to deploy live code in the initial release</strong>.  At first, this was a huge setback.  Would people even come back and try it again?   Would they be bold enough to trust us and give us their email address if they couldn't actually try it out?   The team came back to the magic moment - Showing people that deploying their code was as easy as pressing a button.  We then came up with sample code repositories, sample deploy endpoints, and made it so that pressing a button would run through a series of actions to make it seem like a deploy was happening.   In reality, this was a series of nice looking javascript templates that were intended to look like a terminal screen deploying.</p>
+      <h2>Releasing the app to the wild</h2>
+      <p>We polished up everything beautifully so that the product/app looked like something "complete" by the end of the weekend.  We are big believers that MVPs (<strong><a href="https://en.wikipedia.org/wiki/Minimum_viable_product">Minimum Viable Products</a></strong>) need to be <em>complete</em> pieces of functionality.  They should give users the impression that there's something there.  Far too often, we see launchrock or "splash page" landing sites that don't communicate enough about what the product does to be valuable or effective at conversion.</p>
+      <p>As the hackathon ended, we shipped our project and went to sleep after 48 hours of continuous coding.  I remember waking up at 2am after getting text messages about our project showing up on <a href="http://news.ycombinator.com">HackerNews</a>, an important site for developers and makers.  I checked our logs, and realized by then we had more than 22,000 users who had tried out DeployButton.  What was amazing, I found, is that our conversion rate was amazingly high, based on the number of visitors who came to the page.  There was really only one big call to action, a giant red button, that deployed your code.  It was delightful, and a bit too hard "not" to press.  Once people saw the value proposition of DeployButton, we ended up getting a boatload of signups and emails flowed through to our list.</p>
+    </section>
+    <section>
+      <div class='image'>
+        <img src="images/projects/deploybutton/wireframe.jpg" />
+      </div>
+      <h2>Winning RailsRumble</h2>
+      <p>To our suprise and delight, DeployButton was selected both as the crowd favorite in RailsRumble and the second prize winner by the judges.  We strongly believe that if we didn't make the initial user experience and onboarding so painstakingly simple, there would be no way that *both* the RailsRumble judges and the crowd would have picked our app as a favorite from the amazing variety of competing applications.</p>
+      <h2>Monetization:</h2>
+      <p>While we knew that the market for developer tools was nascent but growing, we thought hard about monetizing and felt guilty charging money for something that was so utterly simple in many cases. In hindsight, had we continued developing this product, the endpoints for the deploy could have been configured with suites for running continuous integration tests, or as a lead generation platform for devops tools such as New Relic.  Ultimately, other fantastic client opportunities emerged, and we decided that it was best to forgo DeployButton in favor of solving other hairy problems.  We continue to bring the example of effortless onboarding like <a href="http://deploybtn.herokuapp.com">DeployButton</a> to all of our projects.</p>
+      <h2>Key Learnings:</h2>
+      <ul>
+        <li>Let users "taste" as much of the product as they can before asking them for anything in return.  In interaction design/growth terms, this is referred to as a "magic moment".</li>
+        <li>Build a launch checklist to make sure that you've crossed your T's and dotted your i's.</li>
+        <li>Collect emails at the appropriate juncture, and build in opportunities to message your users at the right times to boost conversion.  Make your messages authentic and transparent.</li>
+      </ul>
+    </section>
+    <footer>
+      <p>Copyright &copy; 2015 LabLabLab</p>
+    </footer>
+    </script><script type="text/ng-template" id="grove.html"><section>
+      <div class='back-wrap'>
+        <div class='back' ng-click='root.back()'>
+          <img src="images/icons/back.png" />
+          <span>BACK</span>
+        </div>
+      </div>
+      <h1>Sequoia Capital</h1>
+      <h2>Grove + Who + Radar (and more)</h2>
+      <p>We were asked by one of Silicon Valley’s most respected venture capital firms, Sequoia Capital, to create a community oriented site for portfolio companies.  Sequoia Grove is the result of rapid iteration, gathering product feedback from a variety of different stakeholders including investment partners, technology team members and the marketing group.</p>
+      <p>Grove is an important differentiator among a world where capital is fungible and founders have plenty of choice on where their funding comes from.  Leveraging tribal knowledge and each others networks is embedded in a founding team’s DNA.  Sequoia wanted to develop a site that would be rapidly adopted by the portfolio community to flourish and blossom, like a grove.</p>
+      <p class='caption'>
+        Different iterations of mockups for Sequoia Grove, the community site for portfolio founders
+      </p>
+    </section>
+    <section class='sketches'>
+      <div class='image'>
+        <img src="images/projects/sequoiagrove/grove1.jpg" />
+      </div>
+      <div class='image'>
+        <img src="images/projects/sequoiagrove/grove2.jpg" />
+      </div>
+      <div class='image'>
+        <img src="images/projects/sequoiagrove/grove3.jpg" />
+      </div>
+    </section>
+    <section>
+      <p class='caption'>The team spent time understanding multiple stakeholder needs by doing user research. Personas from partners, admins, LPs, and of course, Founders were all taken in consideration. We developed a stakeholder needs matrix and included both product and content needs for each group.  In order to ensure that the platform would actually be adopted by users, we spent time envisioning potential barriers and enumerated ways in which we could eliminate them.</p>
+      <div class='image'>
+        <img src="images/projects/sequoiagrove/stakeholder-needs.jpg" />
+      </div>
+      <p class='caption'>Building a product/adoption roadmap to get startup founders to use the community site, get them to engage with it, and amplify utility over time.</p>
+      <div class='image'>
+        <img src="images/projects/sequoiagrove/roadmap.jpg" />
+      </div>
+      <p>Today, Grove is a thriving community with solid engagement from one of the most discerning community of technology users <i>and</i> creators:  Venture backed founders from the Sequoia portfolio.  An engagement platform complete with questions and answers and ‘This Week in Grove’ digests are sent out to founders and key executives and employees at startups.</p>
+      <div class='image'>
+        <img src="images/projects/sequoiagrove/grove-internal.gif" />
+      </div>
+      <p>After building an internal version of Grove for Sequoia entrepreneurs, we were asked to build a public facing knowledge repository (<a target="_blank" href="http://sequoiacap.com/grove">Grove External</a>).  Today, the site hosts indispensable content intended to educate consumers of entrepreneurial content (would be founders, early stage teams).  Our team helped to create the corresponding brand for Sequoia events, called <strong>Grove Unplugged</strong>.</p>
+      <h2></h2>
+    </section>
+    <footer>
+      <p>Copyright &copy; 2015 LabLabLab</p>
+    </footer>
+    </script><script type="text/ng-template" id="hearnear.html"><section>
+      <div class='back-wrap'>
+        <div class='back' ng-click='root.back()'>
+          <img src="images/icons/back.png" />
+          <span>BACK</span>
+        </div>
+      </div>
+      <h1>HearNear</h1>
+      <p>During a drive in San Francisco in 2013, we started asking ourselves questions about the places we drove through.  What's the monument on the left?  What is the name of the neighborhood we're currently driving through?  In order to answer all of the questions we had, we realized we'd have to pull together information from a multitude of apps and websites.</p>
+      <p>When you’re looking at a website on a 15 inch computer screen, it’s okay to see walls of text, images, and be bombarded by visual ephemera.   When you’re walking around or driving, you want to retain your ability to perceive the world around you visually.  After all, sight is a human being’s strongest sense.</p>
+      <p>Instantly, the lightbulb went off for us.  We wanted to create a mobile app that tells you about your surroundings as you walk or drive around.  And since we didn’t want to combat your peripheral vision, we decided to focus on your second most powerful sense, hearing. Our app is called HearNear: It’s a mobile app that tells you about your surroundings as you walk or drive around.</p>
+      <h2>Our design / build process:</h2>
+      <p>When we thought about this idea, it seemed so obvious to us.  Why isn't this a real thing?   Why didn't this exist already today?  It became apparent to us when we started to build it. A persistent mobile app, that works even when backgrounded, drains battery like crazy.  We fought hard to improve and decrease battery of our app before releasing it into the real world.</p>
+      <p>We iterated on the user experience of HearNear several times to get it to a product we wanted to use.  Our requirements were nuanced:  We didn't want to be bothered too frequently by random audio snippets, and we wanted to be able to be pleasantly surprised by new and fresh content all the time.  Facets of the problem we explored were scalable content acquisition, increasing battery performance, and a delightful system of notifying users when an important landmark was nearby.</p>
+    </section>
+    <section>
+      <div class='sketches'>
+        <div class='image'>
+          <img src="images/projects/hearnear/explore-mini-detail.png" />
+        </div>
+        <div class='image'>
+          <img src="images/projects/hearnear/sidepanel.png" />
+        </div>
+        <div class='image'>
+          <img src="images/projects/hearnear/tour_index.png" />
+        </div>
+        <div class='image'>
+          <img src="images/projects/hearnear/iteration_tour.png" />
+        </div>
+        <div class='image'>
+          <img src="images/projects/hearnear/iteration2_tour.png" />
+        </div>
+      </div>
+    </section>
+    <section>
+      <!-- %p Videos of final app go here -->
+      <h2>How’s this different than Google Glass?</h2>
+      <p>We built HearNear and tested how it might be a viable business with multiple verticals (Travel + Tourism, Real Estate, and University tours).  As we did this, a larger company had their sites set on futures in augmented reality.  Google Glass is a product released by Google - While its future and potential adoption is in question, we realized that what we had in hand is closer to something people would use.   The likelihood of people to purchase and pay for a new hardware product they don't need is low.  The likelihood of people paying for an app or piece of software that tells you about your surroundings through audio has a larger potential market, so we felt justified in our approach.</p>
+      <h2>What we learned during the process</h2>
+      <p>Building a marketplace for content is tough.   Building a marketplace on its own is tough, but building a content business on top is frustratingly complex.  In order for us to monetize HearNear (essentially a location-triggered podcast), we believe there'd have to be a precedent for people paying for podcast content.  Today, most (if not all) content delivered through podcast form is still free.  The primary monetization mechanism is ads delivered by the speaker of the actual podcast.    Somehow it just never felt right to us to advertise over the air, as people were essentially entrusting us with an open sensorial channel (their sense of hearing). To take that over felt underhanded and selfish.  Over time, there's the possibility that the best location-based audio content could be underwritten by local sponsors.  And that might be the business model that makes HearNear work.</p>
+      <h2>Realizing when it made sense to move on</h2>
+      <p>HearNear as a well designed product and technology are first-rate.  When we released the tool to early adopters, we received rave reviews, and people kept asking us for more (and more varied) content.   They wanted to hear comedians like Louis CK or Aziz Ansari telling them fun and interesting facts about the cities they lived in and to the towns they traveled through.</p>
+      <p>We knew that if we wanted HearNear to live on, we'd have to raise significant money to curate and put together content.  But we also knew that content isn't something that people naturally gravitate to paying for.  And disrupting the market for "tours" sounds appealing, but in reality the market size is relatively small.  The travel TAM (total addressable market) is mostly remnant hotel inventory, and the large search engines and travel portals like tripadvisor have a grasp on these models.</p>
+      <p>We made the hard decision to pull the plug (for now) on HearNear.  We have some ideas on how to take the technology and many of the ideas from our product to some new spaces - We think that these market opportunities are more likely to materialize in the next 5 years as vehicles are more connected.  Until then, we'll take the lessons we learned during our process to all of the new projects we tackle.</p>
+      <p></p>
+      <iframe frameborder='no' height='450' scrolling='no' src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/209925187&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;show_comments=true&amp;amp;show_user=true&amp;amp;show_reposts=false&amp;amp;visual=true' width='100%'></iframe>
+    </section>
+    <footer>
+      <p>Copyright &copy; 2015 LabLabLab</p>
+    </footer>
+    </script><script type="text/ng-template" id="home.html"><div class='page-control'>
+      <div class='page-indicator' name='{{indicator}}' ng-class='{selected:root.pageIndex == $index}' ng-click='root.clickIndicator($index)' ng-repeat='indicator in root.pages'></div>
+    </div>
+    <div class='page' id='splash' scroll-id='p'>
+      <div class='header'>
+        <div class='logoWrap left'>
+          <img src="images/lab_logo.png" />
+          <!-- %svg.logo{viewBox: "0 0 260 61"} -->
+          <!-- %g.logo-wings{transform:"matrix(0.6,0,0,0.6,0,12.2)"} -->
+          <!-- %rect.logo-background{height: "61", width: "118", x: "0", y: "0"} -->
+          <!-- %path.logo-letter{d:"M14.1200027,48.3415179 L37.4832943,48.3415179 L37.4832943,41.92659 L21.421603,41.92659 L21.421603,12.8782997 L14.1198829,12.8783036 L14.1200027,48.3415179 Z"} -->
+          <!-- %path.logo-letter{d:"M42.0268789,48.3415179 L49.0699997,48.3400002 L50.7399979,44.3258304 L65.1300049,44.3258304 L66.8000031,48.3415179 L74.4652896,48.3415179 L58.596807,13.3379562 C58.4800626,13.0804351 58.2465738,12.5653929 58.2465738,12.5653929 L57.6202628,12.5653929 L42.0268789,48.3415179 Z M53.187361,38.2240714 L55.7427985,32.0701607 C56.7858342,29.566875 57.8288699,25.7076429 57.8288699,25.7076429 C57.8288699,25.7076429 58.9240574,29.566875 59.9670932,32.0701607 L62.5225307,38.2240714 L53.187361,38.2240714 Z"} -->
+          <!-- %path.logo-letter{d:"M80.5206874,48.3415179 L94.8624285,48.3415179 C102.267982,48.3415179 106.753036,43.7000089 106.753036,37.3896429 C106.753036,32.9567411 104.406205,29.7233304 99.5560892,28.5759911 C102.633045,27.5851071 104.562661,25.3425804 104.562661,22.0570179 C104.562661,17.0504464 100.859884,12.8783036 94.236607,12.8783036 L80.5206874,12.8783036 L80.5206874,48.3415179 Z M87.8219374,25.9684018 L87.8219374,19.2929732 L93.8193928,19.2929732 C96.0619195,19.2929732 97.3657142,20.5967679 97.3657142,22.6306875 C97.3657142,24.6646071 95.8011606,25.9684018 93.4543303,25.9684018 L87.8219374,25.9684018 Z M87.8219374,41.9268482 L87.8219374,32.1744643 L94.1323035,32.1744643 C97.4700178,32.1744643 99.3996338,34.1562321 99.3996338,37.0245804 C99.3996338,39.9450804 97.5221695,41.9268482 94.5495178,41.9268482 L87.8219374,41.9268482 Z"} -->
+          <!-- %g{transform:"matrix(1,0,0,1,71,0)"} -->
+          <!-- %rect.logo-background{height: "61", width: "118", x: "0", y: "0"} -->
+          <!-- %path.logo-shadow{d:"M37.4832943,48.3415179 L37.4832943,41.92659 L21.421603,41.92659 L21.421603,12.9095168 L48,61 L21.6975593,60.8526786 L14.1204251,48.3415179 L37.4832943,48.3415179 Z"} -->
+          <!-- %path.logo-shadow{d:"M118,61 L88.0038886,61 L80.5235585,48.3413249 L103.031121,43.1606011 L98.4990707,28.7938582 L103.613216,17.9606951 L118,47.9341952 L118,61 Z"} -->
+          <!-- %path.logo-shadow{d:"M50.7399979,44.3300018 L65.1300049,44.3300018 L66.8000031,48.3400002 L74.4613797,48.3429687 L58.2686947,12.5730765 L86.9026492,61 L49,61 L42.0304972,48.3429687 L49.0699997,48.3400002 L50.7399979,44.3300018 Z"} -->
+          <!-- %path.logo-letter{d:"M14.1200027,48.3415179 L37.4832943,48.3415179 L37.4832943,41.92659 L21.421603,41.92659 L21.421603,12.8782997 L14.1198829,12.8783036 L14.1200027,48.3415179 Z"} -->
+          <!-- %path.logo-letter{d:"M42.0268789,48.3415179 L49.0699997,48.3400002 L50.7399979,44.3258304 L65.1300049,44.3258304 L66.8000031,48.3415179 L74.4652896,48.3415179 L58.596807,13.3379562 C58.4800626,13.0804351 58.2465738,12.5653929 58.2465738,12.5653929 L57.6202628,12.5653929 L42.0268789,48.3415179 Z M53.187361,38.2240714 L55.7427985,32.0701607 C56.7858342,29.566875 57.8288699,25.7076429 57.8288699,25.7076429 C57.8288699,25.7076429 58.9240574,29.566875 59.9670932,32.0701607 L62.5225307,38.2240714 L53.187361,38.2240714 Z"} -->
+          <!-- %path.logo-letter{d:"M80.5206874,48.3415179 L94.8624285,48.3415179 C102.267982,48.3415179 106.753036,43.7000089 106.753036,37.3896429 C106.753036,32.9567411 104.406205,29.7233304 99.5560892,28.5759911 C102.633045,27.5851071 104.562661,25.3425804 104.562661,22.0570179 C104.562661,17.0504464 100.859884,12.8783036 94.236607,12.8783036 L80.5206874,12.8783036 L80.5206874,48.3415179 Z M87.8219374,25.9684018 L87.8219374,19.2929732 L93.8193928,19.2929732 C96.0619195,19.2929732 97.3657142,20.5967679 97.3657142,22.6306875 C97.3657142,24.6646071 95.8011606,25.9684018 93.4543303,25.9684018 L87.8219374,25.9684018 Z M87.8219374,41.9268482 L87.8219374,32.1744643 L94.1323035,32.1744643 C97.4700178,32.1744643 99.3996338,34.1562321 99.3996338,37.0245804 C99.3996338,39.9450804 97.5221695,41.9268482 94.5495178,41.9268482 L87.8219374,41.9268482 Z"} -->
+          <!-- %path.logo-letter-subtract{d:"M87.8219374,25.9684018 L87.8219374,19.2929732 L93.8193928,19.2929732 C96.0619195,19.2929732 97.3657142,20.5967679 97.3657142,22.6306875 C97.3657142,24.6646071 95.8011606,25.9684018 93.4543303,25.9684018 L87.8219374,25.9684018 Z"} -->
+          <!-- %path.logo-letter-subtract{d:"M87.8219374,41.9268482 L87.8219374,32.1744643 L94.1323035,32.1744643 C97.4700178,32.1744643 99.3996338,34.1562321 99.3996338,37.0245804 C99.3996338,39.9450804 97.5221695,41.9268482 94.5495178,41.9268482 L87.8219374,41.9268482 Z"} -->
+          <!-- %path.logo-letter-subtract{d:"M53.187361,38.2240714 L55.7427985,32.0701607 C56.7858342,29.566875 57.8288699,25.7076429 57.8288699,25.7076429 C57.8288699,25.7076429 58.9240574,29.566875 59.9670932,32.0701607 L62.5225307,38.2240714 L53.187361,38.2240714 Z"} -->
+          <!-- %g.logo-wings{transform:"matrix(0.6,0,0,0.6,189,12.2)"} -->
+          <!-- %rect.logo-background{height: "61", width: "118", x: "0", y: "0"} -->
+          <!-- %path.logo-letter{d:"M14.1200027,48.3415179 L37.4832943,48.3415179 L37.4832943,41.92659 L21.421603,41.92659 L21.421603,12.8782997 L14.1198829,12.8783036 L14.1200027,48.3415179 Z"} -->
+          <!-- %path.logo-letter{d:"M42.0268789,48.3415179 L49.0699997,48.3400002 L50.7399979,44.3258304 L65.1300049,44.3258304 L66.8000031,48.3415179 L74.4652896,48.3415179 L58.596807,13.3379562 C58.4800626,13.0804351 58.2465738,12.5653929 58.2465738,12.5653929 L57.6202628,12.5653929 L42.0268789,48.3415179 Z M53.187361,38.2240714 L55.7427985,32.0701607 C56.7858342,29.566875 57.8288699,25.7076429 57.8288699,25.7076429 C57.8288699,25.7076429 58.9240574,29.566875 59.9670932,32.0701607 L62.5225307,38.2240714 L53.187361,38.2240714 Z"} -->
+          <!-- %path.logo-letter{d:"M80.5206874,48.3415179 L94.8624285,48.3415179 C102.267982,48.3415179 106.753036,43.7000089 106.753036,37.3896429 C106.753036,32.9567411 104.406205,29.7233304 99.5560892,28.5759911 C102.633045,27.5851071 104.562661,25.3425804 104.562661,22.0570179 C104.562661,17.0504464 100.859884,12.8783036 94.236607,12.8783036 L80.5206874,12.8783036 L80.5206874,48.3415179 Z M87.8219374,25.9684018 L87.8219374,19.2929732 L93.8193928,19.2929732 C96.0619195,19.2929732 97.3657142,20.5967679 97.3657142,22.6306875 C97.3657142,24.6646071 95.8011606,25.9684018 93.4543303,25.9684018 L87.8219374,25.9684018 Z M87.8219374,41.9268482 L87.8219374,32.1744643 L94.1323035,32.1744643 C97.4700178,32.1744643 99.3996338,34.1562321 99.3996338,37.0245804 C99.3996338,39.9450804 97.5221695,41.9268482 94.5495178,41.9268482 L87.8219374,41.9268482 Z"} -->
+        </div>
+        <svg class='beaker' viewBox='0 0 44 69'>
+          <defs>
+            <radialGradient cx='50%' cy='0%' fx='50%' fy='0%' id='beakerGradient' r='157.5%'>
+              <stop offset='0%'></stop>
+              <stop offset='100%'></stop>
+            </radialGradient>
+          </defs>
+          <path class='beaker-liquid' d='M12.302437,47.3699489 C19.2452177,48.4829103 26.6436224,49.4807136 32.804046,49.8796297 L41.957482,60.882455 C45.6276976,65.2942126 43.9400188,68.8703008 38.1883031,68.8703008 L5.94351503,68.8703008 C0.192524352,68.8703008 -1.59700039,65.211603 1.94811914,60.6983706 L11.6926641,48.2927534 C11.9047971,48.0226905 12.1095422,47.7107785 12.3024402,47.3699494 Z'></path>
+          <path class='beaker-glass' d='M32.9342235,49.8796297 L31.517345,48.1764806 C30.3251657,46.7434296 29.3579178,44.0615612 29.3579178,42.1875394 L29.3579178,25.0319549 L30.5168819,25.0319549 C31.4147688,25.0319549 32.1444243,24.3061007 32.1444243,23.4107143 C32.1444243,22.515131 31.4157488,21.7894737 30.5168819,21.7894737 L12.752101,21.7894737 C11.8542141,21.7894737 11.1245585,22.5153278 11.1245585,23.4107143 C11.1245585,24.3062976 11.8532341,25.0319549 12.752101,25.0319549 L13.911065,25.0319549 L13.911065,42.2552876 C13.911065,43.7764672 13.2884399,45.8578084 12.4326178,47.3699494 C19.3753955,48.4829103 26.7738001,49.4807136 32.9342235,49.8796297 Z'></path>
+          <circle cx='25' cy='4' r='4'>
+            <animate attributeName='cy' calcMode='spline' dur='1.7s' from='55' keySplines='0 0.75 0.25 1' repeatCount='indefinite' to='5'></animate>
+            <animate attributeName='opacity' calcMode='spline' dur='1.7s' from='0' keySplines='0 0.75 0.25 1' keyTimes='0;0.8' repeatCount='indefinite' to='1'></animate>
+          </circle>
+          <circle cx='17' cy='14' id='boilSmall' r='2'>
+            <animate attributeName='cy' calcMode='spline' dur='1.5s' from='52' keySplines='0 0.75 0.25 1' repeatCount='indefinite' to='5'></animate>
+            <animate attributeName='opacity' calcMode='spline' dur='1.5s' from='0' keySplines='0 0.75 0.25 1' keyTimes='0;0.8' repeatCount='indefinite' to='1'></animate>
+          </circle>
+        </svg>
+        <div class='right'></div>
+      </div>
+      <div class='splash'>
+        <h1>Launch Fast.</h1>
+        <h1>Learn from users.</h1>
+        <h1>Build the right thing.</h1>
+        <!-- Make to know loop -->
+        <div class='loop-button'>MAKE-TO-KNOW</div>
+        <svg class='loop' viewBox='0 0 771 407'>
+          <linearGradient id='grad'>
+            <stop stop-color='#DBDBDB'></stop>
+            <stop offset='100%' stop-color='#FFFFFF'></stop>
+          </linearGradient>
+          <ellipse cx='238.5' cy='203.5' id='bigOval' rx='200.5' ry='200.5'>
+            <animateTransform attributeName='transform' dur='4s' from='0 238.5 203.5' repeatCount='indefinite' to='360 238.5 203.5' type='rotate'></animateTransform>
+          </ellipse>
+          <ellipse cx='493.5' cy='174.5' id='smallOval' rx='125.5' ry='125.5'>
+            <animateTransform attributeName='transform' dur='4s' from='0 493.5 174.5' repeatCount='indefinite' to='-360 493.5 174.5' type='rotate'></animateTransform>
+          </ellipse>
+          <g class='circle circle1' transform='translate(63.000000, 60.000000)'>
+            <circle cx='20' cy='20' r='20'></circle>
+            <text class='white'>
+              <tspan x='16' y='25'>1</tspan>
+            </text>
+          </g>
+          <g class='circle circle2' transform='translate(384.000000, 66.000000)'>
+            <circle cx='20' cy='20' r='20'></circle>
+            <text class='white'>
+              <tspan x='16' y='26'>2</tspan>
+            </text>
+          </g>
+          <g class='circle circle4' transform='translate(406.000000, 261.000000)'>
+            <circle cx='20' cy='20' r='20'></circle>
+            <text class='white'>
+              <tspan x='17' y='25'>3</tspan>
+            </text>
+          </g>
+          <g class='circle circle5' transform='translate(83.000000, 330.000000)'>
+            <circle cx='20' cy='20' r='20'></circle>
+            <text class='white'>
+              <tspan x='14' y='25'>4</tspan>
+            </text>
+          </g>
+          <g class='circle circle3' transform='translate(570.000000, 74.000000)'>
+            <circle class='small' cx='16' cy='16' r='16'></circle>
+            <path class='person' d='M18.6601455,12.3710769 L13.7674182,12.3710769 C13.2333091,12.3710769 12.8,12.7784615 12.8,13.2812308 L13.1619636,17.0584615 L13.1724364,17.1723077 C13.2274182,17.4449231 13.4826909,17.6516923 13.7890182,17.6516923 L13.7890182,17.6523077 L13.9788364,17.6523077 C13.9873455,17.6516923 13.9965091,17.6516923 14.0056727,17.6516923 C14.0148364,17.6516923 14.0233455,17.6516923 14.0325091,17.6523077 C14.2308364,17.6646154 14.3918545,17.8061538 14.4193455,17.9889231 C14.4226182,18.0061538 14.4239273,18.0233846 14.4245818,18.0406154 L14.7603636,21.9987692 L14.7682182,22.0867692 C14.8153455,22.3686154 15.0745455,22.5846154 15.3874182,22.5846154 L17.0421091,22.5846154 C17.3504,22.5846154 17.6069818,22.3753846 17.6593455,22.0996923 L17.6685091,21.9852308 L18.0042909,18.0344615 C18.0042909,18.0215385 18.0056,18.0086154 18.0075636,17.9963077 C18.0324364,17.8098462 18.1954182,17.6646154 18.3963636,17.6523077 C18.4048727,17.6516923 18.4140364,17.6516923 18.4232,17.6516923 C18.4317091,17.6516923 18.4408727,17.6516923 18.4500364,17.6523077 L18.6365818,17.6523077 L18.6365818,17.6516923 C18.9501091,17.6516923 19.2106182,17.4350769 19.2564364,17.152 L19.2577455,17.1452308 L19.2629818,17.0867692 L19.6282182,13.2812308 C19.6282182,12.7784615 19.1942545,12.3710769 18.6601455,12.3710769 Z M16.2139127,11.6006769 C17.3973309,11.6006769 18.35624,10.6985231 18.35624,9.58713846 C18.35624,8.47452308 17.3973309,7.57236923 16.2139127,7.57236923 C15.0304945,7.57236923 14.07224,8.47452308 14.07224,9.58713846 C14.07224,10.6985231 15.0304945,11.6006769 16.2139127,11.6006769 Z'></path>
+          </g>
+          <g class='circle circle3' transform='translate(601.000000, 135.000000)'>
+            <circle class='small' cx='16' cy='16' r='16'></circle>
+            <path class='person' d='M18.6601455,12.3710769 L13.7674182,12.3710769 C13.2333091,12.3710769 12.8,12.7784615 12.8,13.2812308 L13.1619636,17.0584615 L13.1724364,17.1723077 C13.2274182,17.4449231 13.4826909,17.6516923 13.7890182,17.6516923 L13.7890182,17.6523077 L13.9788364,17.6523077 C13.9873455,17.6516923 13.9965091,17.6516923 14.0056727,17.6516923 C14.0148364,17.6516923 14.0233455,17.6516923 14.0325091,17.6523077 C14.2308364,17.6646154 14.3918545,17.8061538 14.4193455,17.9889231 C14.4226182,18.0061538 14.4239273,18.0233846 14.4245818,18.0406154 L14.7603636,21.9987692 L14.7682182,22.0867692 C14.8153455,22.3686154 15.0745455,22.5846154 15.3874182,22.5846154 L17.0421091,22.5846154 C17.3504,22.5846154 17.6069818,22.3753846 17.6593455,22.0996923 L17.6685091,21.9852308 L18.0042909,18.0344615 C18.0042909,18.0215385 18.0056,18.0086154 18.0075636,17.9963077 C18.0324364,17.8098462 18.1954182,17.6646154 18.3963636,17.6523077 C18.4048727,17.6516923 18.4140364,17.6516923 18.4232,17.6516923 C18.4317091,17.6516923 18.4408727,17.6516923 18.4500364,17.6523077 L18.6365818,17.6523077 L18.6365818,17.6516923 C18.9501091,17.6516923 19.2106182,17.4350769 19.2564364,17.152 L19.2577455,17.1452308 L19.2629818,17.0867692 L19.6282182,13.2812308 C19.6282182,12.7784615 19.1942545,12.3710769 18.6601455,12.3710769 Z M16.2139127,11.6006769 C17.3973309,11.6006769 18.35624,10.6985231 18.35624,9.58713846 C18.35624,8.47452308 17.3973309,7.57236923 16.2139127,7.57236923 C15.0304945,7.57236923 14.07224,8.47452308 14.07224,9.58713846 C14.07224,10.6985231 15.0304945,11.6006769 16.2139127,11.6006769 Z'></path>
+          </g>
+          <g class='circle circle3' transform='translate(595.000000, 204.000000)'>
+            <circle class='small' cx='16' cy='16' r='16'></circle>
+            <path class='person' d='M18.6601455,12.3710769 L13.7674182,12.3710769 C13.2333091,12.3710769 12.8,12.7784615 12.8,13.2812308 L13.1619636,17.0584615 L13.1724364,17.1723077 C13.2274182,17.4449231 13.4826909,17.6516923 13.7890182,17.6516923 L13.7890182,17.6523077 L13.9788364,17.6523077 C13.9873455,17.6516923 13.9965091,17.6516923 14.0056727,17.6516923 C14.0148364,17.6516923 14.0233455,17.6516923 14.0325091,17.6523077 C14.2308364,17.6646154 14.3918545,17.8061538 14.4193455,17.9889231 C14.4226182,18.0061538 14.4239273,18.0233846 14.4245818,18.0406154 L14.7603636,21.9987692 L14.7682182,22.0867692 C14.8153455,22.3686154 15.0745455,22.5846154 15.3874182,22.5846154 L17.0421091,22.5846154 C17.3504,22.5846154 17.6069818,22.3753846 17.6593455,22.0996923 L17.6685091,21.9852308 L18.0042909,18.0344615 C18.0042909,18.0215385 18.0056,18.0086154 18.0075636,17.9963077 C18.0324364,17.8098462 18.1954182,17.6646154 18.3963636,17.6523077 C18.4048727,17.6516923 18.4140364,17.6516923 18.4232,17.6516923 C18.4317091,17.6516923 18.4408727,17.6516923 18.4500364,17.6523077 L18.6365818,17.6523077 L18.6365818,17.6516923 C18.9501091,17.6516923 19.2106182,17.4350769 19.2564364,17.152 L19.2577455,17.1452308 L19.2629818,17.0867692 L19.6282182,13.2812308 C19.6282182,12.7784615 19.1942545,12.3710769 18.6601455,12.3710769 Z M16.2139127,11.6006769 C17.3973309,11.6006769 18.35624,10.6985231 18.35624,9.58713846 C18.35624,8.47452308 17.3973309,7.57236923 16.2139127,7.57236923 C15.0304945,7.57236923 14.07224,8.47452308 14.07224,9.58713846 C14.07224,10.6985231 15.0304945,11.6006769 16.2139127,11.6006769 Z'></path>
+          </g>
+          <text fill='#888888' font-size='24' font-weight='260' letter-spacing='1'>
+            <tspan x='383' y='22'>MAKE</tspan>
+          </text>
+          <text fill='#888888' font-size='24' font-weight='260' letter-spacing='1'>
+            <tspan x='648' y='154'>USER TEST</tspan>
+          </text>
+          <text fill='#888888' font-size='24' font-weight='260' letter-spacing='1'>
+            <tspan x='438' y='342'>LEARN</tspan>
+          </text>
+          <text fill='#888888' font-size='24' font-weight='260' letter-spacing='1'>
+            <tspan x='54' y='401'>SHIP</tspan>
+          </text>
+          <text fill='#888888' font-size='24' font-weight='260' letter-spacing='1'>
+            <tspan x='0' y='87'>IDEA</tspan>
+          </text>
+        </svg>
+        <p class='center'>LabLabLab specializes in running small experiments using our talented & veteran product team to learn the most about what users want.  We leverage the best tools and frameworks to deliver a functional product to market quickly and de-risk your product launch.</p>
+      </div>
+      <div class='spacer'></div>
+    </div>
+    <div class='page' id='products' scroll-id='p'>
+      <h1>We're not just <em>another</em> dev/design studio.</h1>
+      <h2>We build our own projects and understand what you'll go through in launching yours</h2>
+      <div class='spacer'></div>
+      <h2>Internal Projects</h2>
+      <div class='products'>
+        <a class='product-item' href='http://www.forwardtrail.com' target='_blank'>
+          <img src="images/products/forwardTrail.png" />
+          <div class='product-title'>ForwardTrail</div>
+          <div class='product-desc'>A focused, lightweight CRM for SMBs that requires little to no data entry</div>
+        </a>
+        <div class='product-item comingSoon'>
+          <img src="images/products/prodBase.png" />
+          <div class='product-title'>ProdBase</div>
+          <div class='product-desc'>The elite product managers BFF. Search and input issues, bugs, and feature cards.</div>
+        </div>
+      </div>
+      <div class='spacer'></div>
+    </div>
+    <div class='page' id='projects' scroll-id='p'>
+      <div class='page-header'>Example projects</div>
+      <div class='grid'>
+        <a class='grid-item grove story-images' toggle-class='clicked' ui-sref='grove'>
+          <div class='story-image grove'></div>
+          <div class='story-image-label'>
+            <div class='story-label-sub'>project</div>
+            <div class='story-label-header'>Sequoia Capital</div>
+            <div class='story-label-desc'>Building a community site for the world's most successful venture capital firm</div>
+          </div>
+        </a>
+        <a class='grid-item deploybutton story-images' toggle-class='clicked' ui-sref='deploybutton'>
+          <div class='story-image deploybutton'></div>
+          <div class='story-image-label'>
+            <div class='story-label-sub'>hackathon</div>
+            <div class='story-label-header'>Deploy Button</div>
+            <div class='story-label-desc'>What if deploying code could be as easy as pressing a giant red button?</div>
+          </div>
+        </a>
+        <a class='grid-item hearnear story-images' toggle-class='clicked' ui-sref='hearnear'>
+          <div class='story-image hearnear'></div>
+          <div class='story-image-label'>
+            <div class='story-label-sub'>project</div>
+            <div class='story-label-header'>HearNear</div>
+            <div class='story-label-desc'>Utilizing a new canvas in interaction design in the car and while walking:  Audio</div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <!-- = partial "partials/home/_process.haml" -->
+    <div class='page' id='clients' scroll-id='p'>
+      <h2>We've worked with people from these fine organizations among others.</h2>
+      <div class='clients'>
+        <div class='clients-item'>
+          <a target="_blank" href="http://relocationonline.com"><img src="images/clients/relocation.png" />
+          </a>
+        </div>
+        <div class='clients-item'>
+          <img src="images/clients/bp.png" />
+        </div>
+        <div class='clients-item'>
+          <img src="images/clients/techstars.png" />
+        </div>
+        <div class='clients-item'>
+          <img src="images/clients/recurly.png" />
+        </div>
+        <div class='clients-item'>
+          <a target="_blank" href="http://sequoia.com"><img src="images/clients/sequoia.png" />
+          </a>
+        </div>
+        <div class='clients-item'>
+          <img src="images/clients/miso.png" />
+        </div>
+        <div class='clients-item'>
+          <img src="images/clients/macfound.png" />
+        </div>
+        <div class='clients-item'>
+          <img src="images/clients/gist.png" />
+        </div>
+        <div class='clients-item'>
+          <img src="images/clients/billmelinda.png" />
+        </div>
+        <div class='clients-item'>
+          <img src="images/clients/bluekai.png" />
+        </div>
+        <div class='clients-item'>
+          <img src="images/clients/9mile.png" />
+        </div>
+        <div class='clients-item'>
+          <a target="_blank" href="http://trychameleon.com"><img src="images/clients/chameleon.png" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- = partial "partials/home/_blog.haml" -->
+    <div class='page' id='hire' scroll-id='p'>
+      <h1 class='page-header'>Work with us</h1>
+      <svg class='atom' fill-rule='evenodd' fill='rgba(255,255,255,.05)' viewBox='0 0 1145 1145' width='100px'>
+        <path d='M331.997502,711.625499 C470.068689,950.741977 689.897996,1082.29557 823,1005.45868 C956.102004,928.621792 952.073686,672.490979 814.002498,433.374501 C675.931311,194.258023 456.102004,62.7044253 323,139.541317 C189.897996,216.378208 193.926314,472.509021 331.997502,711.625499 L331.997502,711.625499 Z M366.791632,694.178591 C493.659329,913.892475 689.340223,1038.41454 803.857143,972.306418 C918.374062,906.198292 908.361779,674.493772 781.494082,454.779888 C654.626386,235.066005 458.945491,110.543935 344.428571,176.652061 C229.911652,242.760187 239.923935,474.464707 366.791632,694.178591 L366.791632,694.178591 Z'>
+          <!-- %animateTransform{ attributeName: "transform", type: "rotate", from: "0 572.5 572.5", to: "-360 572.5 572.5", dur: "4s", repeatCount: "indefinite", keySplines:"0 0.75 0.25 1", keyTimes: "0;0.8"} -->
+        </path>
+        <path d='M573,850.750998 C849.142375,850.750998 1073,726.173783 1073,572.5 C1073,418.826217 849.142375,294.249002 573,294.249002 C296.857625,294.249002 73,418.826217 73,572.5 C73,726.173783 296.857625,850.750998 573,850.750998 Z M575.285714,811.898703 C829.021108,811.898703 1034.71429,704.716253 1034.71429,572.5 C1034.71429,440.283747 829.021108,333.101297 575.285714,333.101297 C321.550321,333.101297 115.857143,440.283747 115.857143,572.5 C115.857143,704.716253 321.550321,811.898703 575.285714,811.898703 Z' stroke-width='11' stroke='#333'>
+          <!-- %animateTransform{ attributeName: "transform", type: "rotate", from: "0 572.5 572.5", to: "360 572.5 572.5", dur: "6s", repeatCount: "indefinite", keySplines:"0 0.75 0.25 1", keyTimes: "0;0.8"} -->
+        </path>
+        <path d='M814.002498,711.625499 C952.073686,472.509021 956.102004,216.378208 823,139.541317 C689.897996,62.7044253 470.068689,194.258023 331.997502,433.374501 C193.926314,672.490979 189.897996,928.621792 323,1005.45868 C456.102004,1082.29557 675.931311,950.741977 814.002498,711.625499 L814.002498,711.625499 Z M781.494082,690.220112 C908.361779,470.506228 918.374062,238.801708 803.857143,172.693582 C689.340223,106.585455 493.659329,231.107525 366.791632,450.821409 C239.923935,670.535293 229.911652,902.239813 344.428571,968.347939 C458.945491,1034.45607 654.626386,909.933995 781.494082,690.220112 L781.494082,690.220112 Z'>
+          <!-- %animateTransform{ attributeName: "transform", type: "rotate", from: "0 572.5 572.5", to: "360 572.5 572.5", dur: "4s", repeatCount: "indefinite", keySplines:"0 0.75 0.25 1", keyTimes: "0;0.8"} -->
+        </path>
+        <circle cx='573' cy='572.5' r='77'></circle>
+      </svg>
+      <form ng-controller='HireController as hire' ng-submit='hire.submit()'>
+        <label class='input' ng-class='{error: hire.error.name}'>
+          <input ng-class='{filled:hire.project.name}' ng-model='hire.project.name' type='text'>
+          <div class='label'>Name</div>
+        </label>
+        <label class='input' ng-class='{error: hire.error.email}'>
+          <input ng-class='{filled:hire.project.email}' ng-model='hire.project.email' type='text'>
+          <div class='label'>Email address</div>
+        </label>
+        <label class='input' ng-class='{error: hire.error.phone}'>
+          <input ng-class='{filled:hire.project.phone}' ng-model='hire.project.phone' type='text'>
+          <div class='label'>Telephone</div>
+        </label>
+        <div class='input' ng-class='{error: hire.error.projType}'>
+          <div class='error-label'>{{hire.error.projType}}</div>
+          <div class='checkbox-group'>
+            <label class='checkbox'>
+              <input type="checkbox" name="mobile" value="1" ng-model="hire.project.isMobile" />
+              <div class='checkbox-content'>
+                <img src="images/icons/mobile.png" />
+                <div class='text'>mobile</div>
+              </div>
+            </label>
+            <label class='checkbox'>
+              <input type="checkbox" name="web" value="1" ng-model="hire.project.isWeb" />
+              <div class='checkbox-content'>
+                <img src="images/icons/web.png" />
+                <div class='text'>web</div>
+              </div>
+            </label>
+          </div>
+        </div>
+        <label class='input' ng-class='{error: hire.error.desc}'>
+          <input ng-class='{filled:hire.project.desc}' ng-model='hire.project.desc' placeholder='' type='text'>
+          <div class='label'>Tell us about your project</div>
+        </label>
+        <label class='input' ng-class='{error: hire.error.budget}'>
+          <select ng-class='{filled:hire.project.budget}' ng-model='hire.project.budget'>
+            <option value='1'>I don't know yet</option>
+            <option value='2'>$25 - 55k</option>
+            <option value='2'>$55 - $85k</option>
+            <option value='3'>$85 - $175k</option>
+            <option value='4'>$175k+</option>
+          </select>
+          <div class='label'>Project Budget</div>
+        </label>
+        <p class='thankyou' ng-show='hire.thankYouMessageShow'>Thanks for signing up, we'll be in touch.</p>
+        <label class='input'>
+          <input type='submit' value='inquire'>
+        </label>
+      </form>
+    </div>
+    </script><script type="text/ng-template" id="inflight.html"><section>
+      <div class='back-wrap'>
+        <div class='back' ng-click='root.back()'>
+          <img src="images/icons/back.png" />
+          <span>BACK</span>
+        </div>
+      </div>
+      <h1>Improving someone's inflight user experience</h1>
+      <p></p>
+    </section>
+    <footer>
+      <p>Copyright &copy; 2015 LabLabLab</p>
+    </footer>
+    </script><script type="text/ng-template" id="notifications.html"><section>
+      <div class='back-wrap'>
+        <div class='back' ng-click='root.back()'>
+          <img src="images/icons/back.png" />
+          <span>BACK</span>
+        </div>
+      </div>
+      <h1>Doing Notifications Right</h1>
+      <p>Before the rise of smartphones and even mobile, the only way to get users to do things with your product, service, or experience, was through email.   After smartphones and systems like push notifications, a canvas opened up like never before to reengage users.</p>
+      <p>Notifications are riddled with messy problems that can prevent adoption and engagement in your experience.  At the worst end of the spectrum, notifications can even encourage people from uninstalling your app (the equivalent of unsubscribing to an email).  We encourage people to think through their notification strategy in a systematic way.  We're open sourcing a few tools to help you think through how to do that.</p>
+      <p>The most helpful thing you can do in honing a notification strategy is to build a quick and dirty user experience map.   It doesn't have to start out being perfect or fleshed out all the way  -- On the contrary, starting small and treating the map like a scaffold that you'll fill in along the way is the better way to approach the problem.    In many cases, especially when your product can be experienced or purchased multiple times, your experience map will be cyclical.   When you build the map, you can identify critical success factors and chokepoints that can prevent you from communicating the value of your product, or prevent people from getting maximal utility from your product.   In a business that relies on WOM or a viral loop, mapping your experience is vital to identifying key interaction points where your customers can share with others.</p>
+    </section>
+    <!-- %section -->
+    <!-- %p Photos go here -->
+    <!-- .sketches -->
+    <!-- .image -->
+    <!-- =image_tag "projects/hearnear/explore-mini-detail.png" -->
+    <!-- .image -->
+    <!-- =image_tag "projects/hearnear/sidepanel.png" -->
+    <!-- .image -->
+    <!-- =image_tag "projects/hearnear/tour_index.png" -->
+    <!-- .image -->
+    <!-- =image_tag "projects/hearnear/iteration_tour.png" -->
+    <!-- .image -->
+    <!-- =image_tag "projects/hearnear/iteration2_tour.png" -->
+    <section>
+      <!-- << Show sample user experience map for car sharing - maybe even something like the hackathon - slugg  >> -->
+      <p>When you're building your user experience map, try to use post it notes or something that's easily movable/transferrable, because elements of your process can shift as you flesh out more detail.    Most of the time when we help clients build experience maps, we like to bookend them by figuring out the beginning of the process and the 'end', and put any steps in between.</p>
+      <p>After you've created a user experience map, you can figure out where your app needs to utilize notifications to get users to take an action.  You can treat your map like a “framework” - The framework will help your team talk about where there are holes and where you need more engagement.   One common framework that people use for their startups is Dave McClure’s (500 startups) AARRR.  You can read more about it here.  The high level:  Acquisition, Activation, Retention, Revenue, Referral.  Throughout each phase of your users’s lifecycle, sending them the appropriate message is crucial to the success of the step.</p>
+      <!-- ( Do a better job visualizing this by showing example push notifications for a product ) -->
+    </section>
+    <footer>
+      <p>Copyright &copy; 2015 LabLabLab</p>
+    </footer>
+    </script><script type="text/ng-template" id="home/blog.html"><div class='page' id='blog' scroll-id='p'>
+      <div class='spacer'></div>
+      <h4>See short pieces on interaction design & development from our blog</h4>
+      <div class='spacer'></div>
+      <a class='blog-entry' href='http://yakshaving.net/cooper-talk-about-no-ui/'>
+        <div class='blog-tag'>interface</div>
+        <div class='blog-title'>The future of the interface</div>
+        <div class='blog-desc'>What if the future of the interface is "no interface"?</div>
+      </a>
+      <a class='blog-entry' ui-sref="blog({name:'notifications'})">
+        <div class='blog-tag'>interface</div>
+        <div class='blog-title'>Getting notifications right</div>
+        <div class='blog-desc'>How to improve your app's engagement while ensuring you don't spam your mobile users</div>
+      </a>
+      <!-- %a.blog-entry{"ui-sref" => "blog({name:'inflight'})"} -->
+      <!-- .blog-tag interface -->
+      <!-- .blog-title Redesigning inflight entertainment -->
+      <!-- .blog-desc What would inflight entertainment look like if it were designed well? -->
+      <div class='spacer'></div>
+    </div>
+    </script><script type="text/ng-template" id="home/clients.html"><div class='page' id='clients' scroll-id='p'>
+      <h2>We've worked with people from these fine organizations among others.</h2>
+      <div class='clients'>
+        <div class='clients-item'>
+          <a target="_blank" href="http://relocationonline.com"><img src="images/clients/relocation.png" />
+          </a>
+        </div>
+        <div class='clients-item'>
+          <img src="images/clients/bp.png" />
+        </div>
+        <div class='clients-item'>
+          <img src="images/clients/techstars.png" />
+        </div>
+        <div class='clients-item'>
+          <img src="images/clients/recurly.png" />
+        </div>
+        <div class='clients-item'>
+          <a target="_blank" href="http://sequoia.com"><img src="images/clients/sequoia.png" />
+          </a>
+        </div>
+        <div class='clients-item'>
+          <img src="images/clients/miso.png" />
+        </div>
+        <div class='clients-item'>
+          <img src="images/clients/macfound.png" />
+        </div>
+        <div class='clients-item'>
+          <img src="images/clients/gist.png" />
+        </div>
+        <div class='clients-item'>
+          <img src="images/clients/billmelinda.png" />
+        </div>
+        <div class='clients-item'>
+          <img src="images/clients/bluekai.png" />
+        </div>
+        <div class='clients-item'>
+          <img src="images/clients/9mile.png" />
+        </div>
+        <div class='clients-item'>
+          <a target="_blank" href="http://trychameleon.com"><img src="images/clients/chameleon.png" />
+          </a>
+        </div>
+      </div>
+    </div>
+    </script><script type="text/ng-template" id="home/header.html"><header>
+      <a href='' ng-click='root.hire()'>Work with us</a>
+    </header>
+    </script><script type="text/ng-template" id="home/hire.html"><div class='page' id='hire' scroll-id='p'>
+      <h1 class='page-header'>Work with us</h1>
+      <svg class='atom' fill-rule='evenodd' fill='rgba(255,255,255,.05)' viewBox='0 0 1145 1145' width='100px'>
+        <path d='M331.997502,711.625499 C470.068689,950.741977 689.897996,1082.29557 823,1005.45868 C956.102004,928.621792 952.073686,672.490979 814.002498,433.374501 C675.931311,194.258023 456.102004,62.7044253 323,139.541317 C189.897996,216.378208 193.926314,472.509021 331.997502,711.625499 L331.997502,711.625499 Z M366.791632,694.178591 C493.659329,913.892475 689.340223,1038.41454 803.857143,972.306418 C918.374062,906.198292 908.361779,674.493772 781.494082,454.779888 C654.626386,235.066005 458.945491,110.543935 344.428571,176.652061 C229.911652,242.760187 239.923935,474.464707 366.791632,694.178591 L366.791632,694.178591 Z'>
+          <!-- %animateTransform{ attributeName: "transform", type: "rotate", from: "0 572.5 572.5", to: "-360 572.5 572.5", dur: "4s", repeatCount: "indefinite", keySplines:"0 0.75 0.25 1", keyTimes: "0;0.8"} -->
+        </path>
+        <path d='M573,850.750998 C849.142375,850.750998 1073,726.173783 1073,572.5 C1073,418.826217 849.142375,294.249002 573,294.249002 C296.857625,294.249002 73,418.826217 73,572.5 C73,726.173783 296.857625,850.750998 573,850.750998 Z M575.285714,811.898703 C829.021108,811.898703 1034.71429,704.716253 1034.71429,572.5 C1034.71429,440.283747 829.021108,333.101297 575.285714,333.101297 C321.550321,333.101297 115.857143,440.283747 115.857143,572.5 C115.857143,704.716253 321.550321,811.898703 575.285714,811.898703 Z' stroke-width='11' stroke='#333'>
+          <!-- %animateTransform{ attributeName: "transform", type: "rotate", from: "0 572.5 572.5", to: "360 572.5 572.5", dur: "6s", repeatCount: "indefinite", keySplines:"0 0.75 0.25 1", keyTimes: "0;0.8"} -->
+        </path>
+        <path d='M814.002498,711.625499 C952.073686,472.509021 956.102004,216.378208 823,139.541317 C689.897996,62.7044253 470.068689,194.258023 331.997502,433.374501 C193.926314,672.490979 189.897996,928.621792 323,1005.45868 C456.102004,1082.29557 675.931311,950.741977 814.002498,711.625499 L814.002498,711.625499 Z M781.494082,690.220112 C908.361779,470.506228 918.374062,238.801708 803.857143,172.693582 C689.340223,106.585455 493.659329,231.107525 366.791632,450.821409 C239.923935,670.535293 229.911652,902.239813 344.428571,968.347939 C458.945491,1034.45607 654.626386,909.933995 781.494082,690.220112 L781.494082,690.220112 Z'>
+          <!-- %animateTransform{ attributeName: "transform", type: "rotate", from: "0 572.5 572.5", to: "360 572.5 572.5", dur: "4s", repeatCount: "indefinite", keySplines:"0 0.75 0.25 1", keyTimes: "0;0.8"} -->
+        </path>
+        <circle cx='573' cy='572.5' r='77'></circle>
+      </svg>
+      <form ng-controller='HireController as hire' ng-submit='hire.submit()'>
+        <label class='input' ng-class='{error: hire.error.name}'>
+          <input ng-class='{filled:hire.project.name}' ng-model='hire.project.name' type='text'>
+          <div class='label'>Name</div>
+        </label>
+        <label class='input' ng-class='{error: hire.error.email}'>
+          <input ng-class='{filled:hire.project.email}' ng-model='hire.project.email' type='text'>
+          <div class='label'>Email address</div>
+        </label>
+        <label class='input' ng-class='{error: hire.error.phone}'>
+          <input ng-class='{filled:hire.project.phone}' ng-model='hire.project.phone' type='text'>
+          <div class='label'>Telephone</div>
+        </label>
+        <div class='input' ng-class='{error: hire.error.projType}'>
+          <div class='error-label'>{{hire.error.projType}}</div>
+          <div class='checkbox-group'>
+            <label class='checkbox'>
+              <input type="checkbox" name="mobile" value="1" ng-model="hire.project.isMobile" />
+              <div class='checkbox-content'>
+                <img src="images/icons/mobile.png" />
+                <div class='text'>mobile</div>
+              </div>
+            </label>
+            <label class='checkbox'>
+              <input type="checkbox" name="web" value="1" ng-model="hire.project.isWeb" />
+              <div class='checkbox-content'>
+                <img src="images/icons/web.png" />
+                <div class='text'>web</div>
+              </div>
+            </label>
+          </div>
+        </div>
+        <label class='input' ng-class='{error: hire.error.desc}'>
+          <input ng-class='{filled:hire.project.desc}' ng-model='hire.project.desc' placeholder='' type='text'>
+          <div class='label'>Tell us about your project</div>
+        </label>
+        <label class='input' ng-class='{error: hire.error.budget}'>
+          <select ng-class='{filled:hire.project.budget}' ng-model='hire.project.budget'>
+            <option value='1'>I don't know yet</option>
+            <option value='2'>$25 - 55k</option>
+            <option value='2'>$55 - $85k</option>
+            <option value='3'>$85 - $175k</option>
+            <option value='4'>$175k+</option>
+          </select>
+          <div class='label'>Project Budget</div>
+        </label>
+        <p class='thankyou' ng-show='hire.thankYouMessageShow'>Thanks for signing up, we'll be in touch.</p>
+        <label class='input'>
+          <input type='submit' value='inquire'>
+        </label>
+      </form>
+    </div>
+    </script><script type="text/ng-template" id="home/process.html"><div class='page' id='process' scroll-id='p'>
+      <div class='page-header'>Our Process</div>
+      <div class='grid'>
+        <a class='grid-item story-images partial' toggle-class='clicked' ui-sref='days()'>
+          <div class='story-image day1'>
+            <div class='proc-overlay red'></div>
+          </div>
+          <div class='story-image-label partialReveal'>
+            <div class='story-label-sub'>day 1</div>
+            <div class='story-label-header'>info</div>
+            <div class='story-label-desc'>Learn about users</div>
+          </div>
+        </a>
+        <a class='grid-item story-images partial' toggle-class='clicked' ui-sref="days({'p': 2})">
+          <div class='story-image day2'>
+            <div class='proc-overlay blue'></div>
+          </div>
+          <div class='story-image-label partialReveal'>
+            <div class='story-label-sub'>day 2</div>
+            <div class='story-label-header'>flows</div>
+            <div class='story-label-desc'>Explore solutions</div>
+          </div>
+        </a>
+        <a class='grid-item story-images partial' toggle-class='clicked' ui-sref="days({'p': 3})">
+          <div class='story-image day3'>
+            <div class='proc-overlay yellow'></div>
+          </div>
+          <div class='story-image-label partialReveal'>
+            <div class='story-label-sub'>day 3</div>
+            <div class='story-label-header'>design</div>
+            <div class='story-label-desc'>Put pen to paper</div>
+          </div>
+        </a>
+        <a class='grid-item story-images partial' toggle-class='clicked' ui-sref="days({'p': 4})">
+          <div class='story-image day4'>
+            <div class='proc-overlay green'></div>
+          </div>
+          <div class='story-image-label partialReveal'>
+            <div class='story-label-sub'>day 4</div>
+            <div class='story-label-header'>develop</div>
+            <div class='story-label-desc'>Start coding</div>
+          </div>
+        </a>
+        <a class='grid-item story-images partial' toggle-class='clicked' ui-sref="days({'p': 5})">
+          <div class='story-image day5'>
+            <div class='proc-overlay purple'></div>
+          </div>
+          <div class='story-image-label partialReveal'>
+            <div class='story-label-sub'>day 5</div>
+            <div class='story-label-header'>feedback</div>
+            <div class='story-label-desc'>Continue hacking</div>
+          </div>
+        </a>
+        <a class='grid-item story-images partial' toggle-class='clicked' ui-sref="days({'p': 6})">
+          <div class='story-image day6'>
+            <div class='proc-overlay cyan'></div>
+          </div>
+          <div class='story-image-label partialReveal'>
+            <div class='story-label-sub'>day 6</div>
+            <div class='story-label-header'>cleanup</div>
+            <div class='story-label-desc'>Polish for soft launch</div>
+          </div>
+        </a>
+      </div>
+    </div>
+    </script><script type="text/ng-template" id="home/process2.html"><svg class='beaker' viewBox='0 0 44 69'>
+      <defs>
+        <radialGradient cx='50%' cy='0%' fx='50%' fy='0%' id='beakerGradient' r='157.5%'>
+          <stop offset='0%'></stop>
+          <stop offset='100%'></stop>
+        </radialGradient>
+      </defs>
+      <path class='beaker-liquid' d='M12.302437,47.3699489 C19.2452177,48.4829103 26.6436224,49.4807136 32.804046,49.8796297 L41.957482,60.882455 C45.6276976,65.2942126 43.9400188,68.8703008 38.1883031,68.8703008 L5.94351503,68.8703008 C0.192524352,68.8703008 -1.59700039,65.211603 1.94811914,60.6983706 L11.6926641,48.2927534 C11.9047971,48.0226905 12.1095422,47.7107785 12.3024402,47.3699494 Z'></path>
+      <path class='beaker-glass' d='M32.9342235,49.8796297 L31.517345,48.1764806 C30.3251657,46.7434296 29.3579178,44.0615612 29.3579178,42.1875394 L29.3579178,25.0319549 L30.5168819,25.0319549 C31.4147688,25.0319549 32.1444243,24.3061007 32.1444243,23.4107143 C32.1444243,22.515131 31.4157488,21.7894737 30.5168819,21.7894737 L12.752101,21.7894737 C11.8542141,21.7894737 11.1245585,22.5153278 11.1245585,23.4107143 C11.1245585,24.3062976 11.8532341,25.0319549 12.752101,25.0319549 L13.911065,25.0319549 L13.911065,42.2552876 C13.911065,43.7764672 13.2884399,45.8578084 12.4326178,47.3699494 C19.3753955,48.4829103 26.7738001,49.4807136 32.9342235,49.8796297 Z'></path>
+      <circle cx='25' cy='4' r='4'>
+        <animate attributeName='cy' calcMode='spline' dur='1.7s' from='55' keySplines='0 0.75 0.25 1' repeatCount='indefinite' to='5'></animate>
+        <animate attributeName='opacity' calcMode='spline' dur='1.7s' from='0' keySplines='0 0.75 0.25 1' keyTimes='0;0.8' repeatCount='indefinite' to='1'></animate>
+      </circle>
+      <circle cx='17' cy='14' id='boilSmall' r='2'>
+        <animate attributeName='cy' calcMode='spline' dur='1.5s' from='52' keySplines='0 0.75 0.25 1' repeatCount='indefinite' to='5'></animate>
+        <animate attributeName='opacity' calcMode='spline' dur='1.5s' from='0' keySplines='0 0.75 0.25 1' keyTimes='0;0.8' repeatCount='indefinite' to='1'></animate>
+      </circle>
+    </svg>
+    <div class='logoWrap left'>
+      <img src="images/lab_logo.png" />
+      <!-- %svg.logo{viewBox: "0 0 260 61"} -->
+      <!-- %g.logo-wings{transform:"matrix(0.6,0,0,0.6,0,12.2)"} -->
+      <!-- %rect.logo-background{height: "61", width: "118", x: "0", y: "0"} -->
+      <!-- %path.logo-letter{d:"M14.1200027,48.3415179 L37.4832943,48.3415179 L37.4832943,41.92659 L21.421603,41.92659 L21.421603,12.8782997 L14.1198829,12.8783036 L14.1200027,48.3415179 Z"} -->
+      <!-- %path.logo-letter{d:"M42.0268789,48.3415179 L49.0699997,48.3400002 L50.7399979,44.3258304 L65.1300049,44.3258304 L66.8000031,48.3415179 L74.4652896,48.3415179 L58.596807,13.3379562 C58.4800626,13.0804351 58.2465738,12.5653929 58.2465738,12.5653929 L57.6202628,12.5653929 L42.0268789,48.3415179 Z M53.187361,38.2240714 L55.7427985,32.0701607 C56.7858342,29.566875 57.8288699,25.7076429 57.8288699,25.7076429 C57.8288699,25.7076429 58.9240574,29.566875 59.9670932,32.0701607 L62.5225307,38.2240714 L53.187361,38.2240714 Z"} -->
+      <!-- %path.logo-letter{d:"M80.5206874,48.3415179 L94.8624285,48.3415179 C102.267982,48.3415179 106.753036,43.7000089 106.753036,37.3896429 C106.753036,32.9567411 104.406205,29.7233304 99.5560892,28.5759911 C102.633045,27.5851071 104.562661,25.3425804 104.562661,22.0570179 C104.562661,17.0504464 100.859884,12.8783036 94.236607,12.8783036 L80.5206874,12.8783036 L80.5206874,48.3415179 Z M87.8219374,25.9684018 L87.8219374,19.2929732 L93.8193928,19.2929732 C96.0619195,19.2929732 97.3657142,20.5967679 97.3657142,22.6306875 C97.3657142,24.6646071 95.8011606,25.9684018 93.4543303,25.9684018 L87.8219374,25.9684018 Z M87.8219374,41.9268482 L87.8219374,32.1744643 L94.1323035,32.1744643 C97.4700178,32.1744643 99.3996338,34.1562321 99.3996338,37.0245804 C99.3996338,39.9450804 97.5221695,41.9268482 94.5495178,41.9268482 L87.8219374,41.9268482 Z"} -->
+      <!-- %g{transform:"matrix(1,0,0,1,71,0)"} -->
+      <!-- %rect.logo-background{height: "61", width: "118", x: "0", y: "0"} -->
+      <!-- %path.logo-shadow{d:"M37.4832943,48.3415179 L37.4832943,41.92659 L21.421603,41.92659 L21.421603,12.9095168 L48,61 L21.6975593,60.8526786 L14.1204251,48.3415179 L37.4832943,48.3415179 Z"} -->
+      <!-- %path.logo-shadow{d:"M118,61 L88.0038886,61 L80.5235585,48.3413249 L103.031121,43.1606011 L98.4990707,28.7938582 L103.613216,17.9606951 L118,47.9341952 L118,61 Z"} -->
+      <!-- %path.logo-shadow{d:"M50.7399979,44.3300018 L65.1300049,44.3300018 L66.8000031,48.3400002 L74.4613797,48.3429687 L58.2686947,12.5730765 L86.9026492,61 L49,61 L42.0304972,48.3429687 L49.0699997,48.3400002 L50.7399979,44.3300018 Z"} -->
+      <!-- %path.logo-letter{d:"M14.1200027,48.3415179 L37.4832943,48.3415179 L37.4832943,41.92659 L21.421603,41.92659 L21.421603,12.8782997 L14.1198829,12.8783036 L14.1200027,48.3415179 Z"} -->
+      <!-- %path.logo-letter{d:"M42.0268789,48.3415179 L49.0699997,48.3400002 L50.7399979,44.3258304 L65.1300049,44.3258304 L66.8000031,48.3415179 L74.4652896,48.3415179 L58.596807,13.3379562 C58.4800626,13.0804351 58.2465738,12.5653929 58.2465738,12.5653929 L57.6202628,12.5653929 L42.0268789,48.3415179 Z M53.187361,38.2240714 L55.7427985,32.0701607 C56.7858342,29.566875 57.8288699,25.7076429 57.8288699,25.7076429 C57.8288699,25.7076429 58.9240574,29.566875 59.9670932,32.0701607 L62.5225307,38.2240714 L53.187361,38.2240714 Z"} -->
+      <!-- %path.logo-letter{d:"M80.5206874,48.3415179 L94.8624285,48.3415179 C102.267982,48.3415179 106.753036,43.7000089 106.753036,37.3896429 C106.753036,32.9567411 104.406205,29.7233304 99.5560892,28.5759911 C102.633045,27.5851071 104.562661,25.3425804 104.562661,22.0570179 C104.562661,17.0504464 100.859884,12.8783036 94.236607,12.8783036 L80.5206874,12.8783036 L80.5206874,48.3415179 Z M87.8219374,25.9684018 L87.8219374,19.2929732 L93.8193928,19.2929732 C96.0619195,19.2929732 97.3657142,20.5967679 97.3657142,22.6306875 C97.3657142,24.6646071 95.8011606,25.9684018 93.4543303,25.9684018 L87.8219374,25.9684018 Z M87.8219374,41.9268482 L87.8219374,32.1744643 L94.1323035,32.1744643 C97.4700178,32.1744643 99.3996338,34.1562321 99.3996338,37.0245804 C99.3996338,39.9450804 97.5221695,41.9268482 94.5495178,41.9268482 L87.8219374,41.9268482 Z"} -->
+      <!-- %path.logo-letter-subtract{d:"M87.8219374,25.9684018 L87.8219374,19.2929732 L93.8193928,19.2929732 C96.0619195,19.2929732 97.3657142,20.5967679 97.3657142,22.6306875 C97.3657142,24.6646071 95.8011606,25.9684018 93.4543303,25.9684018 L87.8219374,25.9684018 Z"} -->
+      <!-- %path.logo-letter-subtract{d:"M87.8219374,41.9268482 L87.8219374,32.1744643 L94.1323035,32.1744643 C97.4700178,32.1744643 99.3996338,34.1562321 99.3996338,37.0245804 C99.3996338,39.9450804 97.5221695,41.9268482 94.5495178,41.9268482 L87.8219374,41.9268482 Z"} -->
+      <!-- %path.logo-letter-subtract{d:"M53.187361,38.2240714 L55.7427985,32.0701607 C56.7858342,29.566875 57.8288699,25.7076429 57.8288699,25.7076429 C57.8288699,25.7076429 58.9240574,29.566875 59.9670932,32.0701607 L62.5225307,38.2240714 L53.187361,38.2240714 Z"} -->
+      <!-- %g.logo-wings{transform:"matrix(0.6,0,0,0.6,189,12.2)"} -->
+      <!-- %rect.logo-background{height: "61", width: "118", x: "0", y: "0"} -->
+      <!-- %path.logo-letter{d:"M14.1200027,48.3415179 L37.4832943,48.3415179 L37.4832943,41.92659 L21.421603,41.92659 L21.421603,12.8782997 L14.1198829,12.8783036 L14.1200027,48.3415179 Z"} -->
+      <!-- %path.logo-letter{d:"M42.0268789,48.3415179 L49.0699997,48.3400002 L50.7399979,44.3258304 L65.1300049,44.3258304 L66.8000031,48.3415179 L74.4652896,48.3415179 L58.596807,13.3379562 C58.4800626,13.0804351 58.2465738,12.5653929 58.2465738,12.5653929 L57.6202628,12.5653929 L42.0268789,48.3415179 Z M53.187361,38.2240714 L55.7427985,32.0701607 C56.7858342,29.566875 57.8288699,25.7076429 57.8288699,25.7076429 C57.8288699,25.7076429 58.9240574,29.566875 59.9670932,32.0701607 L62.5225307,38.2240714 L53.187361,38.2240714 Z"} -->
+      <!-- %path.logo-letter{d:"M80.5206874,48.3415179 L94.8624285,48.3415179 C102.267982,48.3415179 106.753036,43.7000089 106.753036,37.3896429 C106.753036,32.9567411 104.406205,29.7233304 99.5560892,28.5759911 C102.633045,27.5851071 104.562661,25.3425804 104.562661,22.0570179 C104.562661,17.0504464 100.859884,12.8783036 94.236607,12.8783036 L80.5206874,12.8783036 L80.5206874,48.3415179 Z M87.8219374,25.9684018 L87.8219374,19.2929732 L93.8193928,19.2929732 C96.0619195,19.2929732 97.3657142,20.5967679 97.3657142,22.6306875 C97.3657142,24.6646071 95.8011606,25.9684018 93.4543303,25.9684018 L87.8219374,25.9684018 Z M87.8219374,41.9268482 L87.8219374,32.1744643 L94.1323035,32.1744643 C97.4700178,32.1744643 99.3996338,34.1562321 99.3996338,37.0245804 C99.3996338,39.9450804 97.5221695,41.9268482 94.5495178,41.9268482 L87.8219374,41.9268482 Z"} -->
+    </div>
+    <h3>Process</h3>
+    <h4>We use low fidelity prototyping to get you to your final goal of a polished, well received product in the press and among your early customers.</h4>
+    <div class='process'>
+      <div class='process-item'>
+        <img src="images/icons/bulb.png" />
+        <div class='process-title'>Refine your ideas through rapid prototyping</div>
+      </div>
+      <div class='process-item'>
+        <img src="images/icons/pencil.png" />
+        <div class='process-title'>Creating usable, delightful experiences</div>
+      </div>
+      <div class='process-item'>
+        <img src="images/icons/wrench.png" />
+        <div class='process-title'>Instrumenting your prototypes to learn from them</div>
+      </div>
+      <div class='process-item'>
+        <img src="images/icons/brackets.png" />
+        <div class='process-title'>Developing a minimum desirable product that you can scale from</div>
+      </div>
+    </div>
+    <div class='page-next page-projects' ng-click='root.next()'>
+      PROJECTS
+    </div>
+    </script><script type="text/ng-template" id="home/products.html"><div class='page' id='products' scroll-id='p'>
+      <h1>We're not just <em>another</em> dev/design studio.</h1>
+      <h2>We build our own projects and understand what you'll go through in launching yours</h2>
+      <div class='spacer'></div>
+      <h2>Internal Projects</h2>
+      <div class='products'>
+        <a class='product-item' href='http://www.forwardtrail.com' target='_blank'>
+          <img src="images/products/forwardTrail.png" />
+          <div class='product-title'>ForwardTrail</div>
+          <div class='product-desc'>A focused, lightweight CRM for SMBs that requires little to no data entry</div>
+        </a>
+        <div class='product-item comingSoon'>
+          <img src="images/products/prodBase.png" />
+          <div class='product-title'>ProdBase</div>
+          <div class='product-desc'>The elite product managers BFF. Search and input issues, bugs, and feature cards.</div>
+        </div>
+      </div>
+      <div class='spacer'></div>
+    </div>
+    </script><script type="text/ng-template" id="home/projects.html"><div class='page' id='projects' scroll-id='p'>
+      <div class='page-header'>Example projects</div>
+      <div class='grid'>
+        <a class='grid-item grove story-images' toggle-class='clicked' ui-sref='grove'>
+          <div class='story-image grove'></div>
+          <div class='story-image-label'>
+            <div class='story-label-sub'>project</div>
+            <div class='story-label-header'>Sequoia Capital</div>
+            <div class='story-label-desc'>Building a community site for the world's most successful venture capital firm</div>
+          </div>
+        </a>
+        <a class='grid-item deploybutton story-images' toggle-class='clicked' ui-sref='deploybutton'>
+          <div class='story-image deploybutton'></div>
+          <div class='story-image-label'>
+            <div class='story-label-sub'>hackathon</div>
+            <div class='story-label-header'>Deploy Button</div>
+            <div class='story-label-desc'>What if deploying code could be as easy as pressing a giant red button?</div>
+          </div>
+        </a>
+        <a class='grid-item hearnear story-images' toggle-class='clicked' ui-sref='hearnear'>
+          <div class='story-image hearnear'></div>
+          <div class='story-image-label'>
+            <div class='story-label-sub'>project</div>
+            <div class='story-label-header'>HearNear</div>
+            <div class='story-label-desc'>Utilizing a new canvas in interaction design in the car and while walking:  Audio</div>
+          </div>
+        </a>
+      </div>
+    </div>
+    </script><script type="text/ng-template" id="home/splash.html"><div class='page' id='splash' scroll-id='p'>
+      <div class='header'>
+        <div class='logoWrap left'>
+          <img src="images/lab_logo.png" />
+          <!-- %svg.logo{viewBox: "0 0 260 61"} -->
+          <!-- %g.logo-wings{transform:"matrix(0.6,0,0,0.6,0,12.2)"} -->
+          <!-- %rect.logo-background{height: "61", width: "118", x: "0", y: "0"} -->
+          <!-- %path.logo-letter{d:"M14.1200027,48.3415179 L37.4832943,48.3415179 L37.4832943,41.92659 L21.421603,41.92659 L21.421603,12.8782997 L14.1198829,12.8783036 L14.1200027,48.3415179 Z"} -->
+          <!-- %path.logo-letter{d:"M42.0268789,48.3415179 L49.0699997,48.3400002 L50.7399979,44.3258304 L65.1300049,44.3258304 L66.8000031,48.3415179 L74.4652896,48.3415179 L58.596807,13.3379562 C58.4800626,13.0804351 58.2465738,12.5653929 58.2465738,12.5653929 L57.6202628,12.5653929 L42.0268789,48.3415179 Z M53.187361,38.2240714 L55.7427985,32.0701607 C56.7858342,29.566875 57.8288699,25.7076429 57.8288699,25.7076429 C57.8288699,25.7076429 58.9240574,29.566875 59.9670932,32.0701607 L62.5225307,38.2240714 L53.187361,38.2240714 Z"} -->
+          <!-- %path.logo-letter{d:"M80.5206874,48.3415179 L94.8624285,48.3415179 C102.267982,48.3415179 106.753036,43.7000089 106.753036,37.3896429 C106.753036,32.9567411 104.406205,29.7233304 99.5560892,28.5759911 C102.633045,27.5851071 104.562661,25.3425804 104.562661,22.0570179 C104.562661,17.0504464 100.859884,12.8783036 94.236607,12.8783036 L80.5206874,12.8783036 L80.5206874,48.3415179 Z M87.8219374,25.9684018 L87.8219374,19.2929732 L93.8193928,19.2929732 C96.0619195,19.2929732 97.3657142,20.5967679 97.3657142,22.6306875 C97.3657142,24.6646071 95.8011606,25.9684018 93.4543303,25.9684018 L87.8219374,25.9684018 Z M87.8219374,41.9268482 L87.8219374,32.1744643 L94.1323035,32.1744643 C97.4700178,32.1744643 99.3996338,34.1562321 99.3996338,37.0245804 C99.3996338,39.9450804 97.5221695,41.9268482 94.5495178,41.9268482 L87.8219374,41.9268482 Z"} -->
+          <!-- %g{transform:"matrix(1,0,0,1,71,0)"} -->
+          <!-- %rect.logo-background{height: "61", width: "118", x: "0", y: "0"} -->
+          <!-- %path.logo-shadow{d:"M37.4832943,48.3415179 L37.4832943,41.92659 L21.421603,41.92659 L21.421603,12.9095168 L48,61 L21.6975593,60.8526786 L14.1204251,48.3415179 L37.4832943,48.3415179 Z"} -->
+          <!-- %path.logo-shadow{d:"M118,61 L88.0038886,61 L80.5235585,48.3413249 L103.031121,43.1606011 L98.4990707,28.7938582 L103.613216,17.9606951 L118,47.9341952 L118,61 Z"} -->
+          <!-- %path.logo-shadow{d:"M50.7399979,44.3300018 L65.1300049,44.3300018 L66.8000031,48.3400002 L74.4613797,48.3429687 L58.2686947,12.5730765 L86.9026492,61 L49,61 L42.0304972,48.3429687 L49.0699997,48.3400002 L50.7399979,44.3300018 Z"} -->
+          <!-- %path.logo-letter{d:"M14.1200027,48.3415179 L37.4832943,48.3415179 L37.4832943,41.92659 L21.421603,41.92659 L21.421603,12.8782997 L14.1198829,12.8783036 L14.1200027,48.3415179 Z"} -->
+          <!-- %path.logo-letter{d:"M42.0268789,48.3415179 L49.0699997,48.3400002 L50.7399979,44.3258304 L65.1300049,44.3258304 L66.8000031,48.3415179 L74.4652896,48.3415179 L58.596807,13.3379562 C58.4800626,13.0804351 58.2465738,12.5653929 58.2465738,12.5653929 L57.6202628,12.5653929 L42.0268789,48.3415179 Z M53.187361,38.2240714 L55.7427985,32.0701607 C56.7858342,29.566875 57.8288699,25.7076429 57.8288699,25.7076429 C57.8288699,25.7076429 58.9240574,29.566875 59.9670932,32.0701607 L62.5225307,38.2240714 L53.187361,38.2240714 Z"} -->
+          <!-- %path.logo-letter{d:"M80.5206874,48.3415179 L94.8624285,48.3415179 C102.267982,48.3415179 106.753036,43.7000089 106.753036,37.3896429 C106.753036,32.9567411 104.406205,29.7233304 99.5560892,28.5759911 C102.633045,27.5851071 104.562661,25.3425804 104.562661,22.0570179 C104.562661,17.0504464 100.859884,12.8783036 94.236607,12.8783036 L80.5206874,12.8783036 L80.5206874,48.3415179 Z M87.8219374,25.9684018 L87.8219374,19.2929732 L93.8193928,19.2929732 C96.0619195,19.2929732 97.3657142,20.5967679 97.3657142,22.6306875 C97.3657142,24.6646071 95.8011606,25.9684018 93.4543303,25.9684018 L87.8219374,25.9684018 Z M87.8219374,41.9268482 L87.8219374,32.1744643 L94.1323035,32.1744643 C97.4700178,32.1744643 99.3996338,34.1562321 99.3996338,37.0245804 C99.3996338,39.9450804 97.5221695,41.9268482 94.5495178,41.9268482 L87.8219374,41.9268482 Z"} -->
+          <!-- %path.logo-letter-subtract{d:"M87.8219374,25.9684018 L87.8219374,19.2929732 L93.8193928,19.2929732 C96.0619195,19.2929732 97.3657142,20.5967679 97.3657142,22.6306875 C97.3657142,24.6646071 95.8011606,25.9684018 93.4543303,25.9684018 L87.8219374,25.9684018 Z"} -->
+          <!-- %path.logo-letter-subtract{d:"M87.8219374,41.9268482 L87.8219374,32.1744643 L94.1323035,32.1744643 C97.4700178,32.1744643 99.3996338,34.1562321 99.3996338,37.0245804 C99.3996338,39.9450804 97.5221695,41.9268482 94.5495178,41.9268482 L87.8219374,41.9268482 Z"} -->
+          <!-- %path.logo-letter-subtract{d:"M53.187361,38.2240714 L55.7427985,32.0701607 C56.7858342,29.566875 57.8288699,25.7076429 57.8288699,25.7076429 C57.8288699,25.7076429 58.9240574,29.566875 59.9670932,32.0701607 L62.5225307,38.2240714 L53.187361,38.2240714 Z"} -->
+          <!-- %g.logo-wings{transform:"matrix(0.6,0,0,0.6,189,12.2)"} -->
+          <!-- %rect.logo-background{height: "61", width: "118", x: "0", y: "0"} -->
+          <!-- %path.logo-letter{d:"M14.1200027,48.3415179 L37.4832943,48.3415179 L37.4832943,41.92659 L21.421603,41.92659 L21.421603,12.8782997 L14.1198829,12.8783036 L14.1200027,48.3415179 Z"} -->
+          <!-- %path.logo-letter{d:"M42.0268789,48.3415179 L49.0699997,48.3400002 L50.7399979,44.3258304 L65.1300049,44.3258304 L66.8000031,48.3415179 L74.4652896,48.3415179 L58.596807,13.3379562 C58.4800626,13.0804351 58.2465738,12.5653929 58.2465738,12.5653929 L57.6202628,12.5653929 L42.0268789,48.3415179 Z M53.187361,38.2240714 L55.7427985,32.0701607 C56.7858342,29.566875 57.8288699,25.7076429 57.8288699,25.7076429 C57.8288699,25.7076429 58.9240574,29.566875 59.9670932,32.0701607 L62.5225307,38.2240714 L53.187361,38.2240714 Z"} -->
+          <!-- %path.logo-letter{d:"M80.5206874,48.3415179 L94.8624285,48.3415179 C102.267982,48.3415179 106.753036,43.7000089 106.753036,37.3896429 C106.753036,32.9567411 104.406205,29.7233304 99.5560892,28.5759911 C102.633045,27.5851071 104.562661,25.3425804 104.562661,22.0570179 C104.562661,17.0504464 100.859884,12.8783036 94.236607,12.8783036 L80.5206874,12.8783036 L80.5206874,48.3415179 Z M87.8219374,25.9684018 L87.8219374,19.2929732 L93.8193928,19.2929732 C96.0619195,19.2929732 97.3657142,20.5967679 97.3657142,22.6306875 C97.3657142,24.6646071 95.8011606,25.9684018 93.4543303,25.9684018 L87.8219374,25.9684018 Z M87.8219374,41.9268482 L87.8219374,32.1744643 L94.1323035,32.1744643 C97.4700178,32.1744643 99.3996338,34.1562321 99.3996338,37.0245804 C99.3996338,39.9450804 97.5221695,41.9268482 94.5495178,41.9268482 L87.8219374,41.9268482 Z"} -->
+        </div>
+        <svg class='beaker' viewBox='0 0 44 69'>
+          <defs>
+            <radialGradient cx='50%' cy='0%' fx='50%' fy='0%' id='beakerGradient' r='157.5%'>
+              <stop offset='0%'></stop>
+              <stop offset='100%'></stop>
+            </radialGradient>
+          </defs>
+          <path class='beaker-liquid' d='M12.302437,47.3699489 C19.2452177,48.4829103 26.6436224,49.4807136 32.804046,49.8796297 L41.957482,60.882455 C45.6276976,65.2942126 43.9400188,68.8703008 38.1883031,68.8703008 L5.94351503,68.8703008 C0.192524352,68.8703008 -1.59700039,65.211603 1.94811914,60.6983706 L11.6926641,48.2927534 C11.9047971,48.0226905 12.1095422,47.7107785 12.3024402,47.3699494 Z'></path>
+          <path class='beaker-glass' d='M32.9342235,49.8796297 L31.517345,48.1764806 C30.3251657,46.7434296 29.3579178,44.0615612 29.3579178,42.1875394 L29.3579178,25.0319549 L30.5168819,25.0319549 C31.4147688,25.0319549 32.1444243,24.3061007 32.1444243,23.4107143 C32.1444243,22.515131 31.4157488,21.7894737 30.5168819,21.7894737 L12.752101,21.7894737 C11.8542141,21.7894737 11.1245585,22.5153278 11.1245585,23.4107143 C11.1245585,24.3062976 11.8532341,25.0319549 12.752101,25.0319549 L13.911065,25.0319549 L13.911065,42.2552876 C13.911065,43.7764672 13.2884399,45.8578084 12.4326178,47.3699494 C19.3753955,48.4829103 26.7738001,49.4807136 32.9342235,49.8796297 Z'></path>
+          <circle cx='25' cy='4' r='4'>
+            <animate attributeName='cy' calcMode='spline' dur='1.7s' from='55' keySplines='0 0.75 0.25 1' repeatCount='indefinite' to='5'></animate>
+            <animate attributeName='opacity' calcMode='spline' dur='1.7s' from='0' keySplines='0 0.75 0.25 1' keyTimes='0;0.8' repeatCount='indefinite' to='1'></animate>
+          </circle>
+          <circle cx='17' cy='14' id='boilSmall' r='2'>
+            <animate attributeName='cy' calcMode='spline' dur='1.5s' from='52' keySplines='0 0.75 0.25 1' repeatCount='indefinite' to='5'></animate>
+            <animate attributeName='opacity' calcMode='spline' dur='1.5s' from='0' keySplines='0 0.75 0.25 1' keyTimes='0;0.8' repeatCount='indefinite' to='1'></animate>
+          </circle>
+        </svg>
+        <div class='right'></div>
+      </div>
+      <div class='splash'>
+        <h1>Launch Fast.</h1>
+        <h1>Learn from users.</h1>
+        <h1>Build the right thing.</h1>
+        <!-- Make to know loop -->
+        <div class='loop-button'>MAKE-TO-KNOW</div>
+        <svg class='loop' viewBox='0 0 771 407'>
+          <linearGradient id='grad'>
+            <stop stop-color='#DBDBDB'></stop>
+            <stop offset='100%' stop-color='#FFFFFF'></stop>
+          </linearGradient>
+          <ellipse cx='238.5' cy='203.5' id='bigOval' rx='200.5' ry='200.5'>
+            <animateTransform attributeName='transform' dur='4s' from='0 238.5 203.5' repeatCount='indefinite' to='360 238.5 203.5' type='rotate'></animateTransform>
+          </ellipse>
+          <ellipse cx='493.5' cy='174.5' id='smallOval' rx='125.5' ry='125.5'>
+            <animateTransform attributeName='transform' dur='4s' from='0 493.5 174.5' repeatCount='indefinite' to='-360 493.5 174.5' type='rotate'></animateTransform>
+          </ellipse>
+          <g class='circle circle1' transform='translate(63.000000, 60.000000)'>
+            <circle cx='20' cy='20' r='20'></circle>
+            <text class='white'>
+              <tspan x='16' y='25'>1</tspan>
+            </text>
+          </g>
+          <g class='circle circle2' transform='translate(384.000000, 66.000000)'>
+            <circle cx='20' cy='20' r='20'></circle>
+            <text class='white'>
+              <tspan x='16' y='26'>2</tspan>
+            </text>
+          </g>
+          <g class='circle circle4' transform='translate(406.000000, 261.000000)'>
+            <circle cx='20' cy='20' r='20'></circle>
+            <text class='white'>
+              <tspan x='17' y='25'>3</tspan>
+            </text>
+          </g>
+          <g class='circle circle5' transform='translate(83.000000, 330.000000)'>
+            <circle cx='20' cy='20' r='20'></circle>
+            <text class='white'>
+              <tspan x='14' y='25'>4</tspan>
+            </text>
+          </g>
+          <g class='circle circle3' transform='translate(570.000000, 74.000000)'>
+            <circle class='small' cx='16' cy='16' r='16'></circle>
+            <path class='person' d='M18.6601455,12.3710769 L13.7674182,12.3710769 C13.2333091,12.3710769 12.8,12.7784615 12.8,13.2812308 L13.1619636,17.0584615 L13.1724364,17.1723077 C13.2274182,17.4449231 13.4826909,17.6516923 13.7890182,17.6516923 L13.7890182,17.6523077 L13.9788364,17.6523077 C13.9873455,17.6516923 13.9965091,17.6516923 14.0056727,17.6516923 C14.0148364,17.6516923 14.0233455,17.6516923 14.0325091,17.6523077 C14.2308364,17.6646154 14.3918545,17.8061538 14.4193455,17.9889231 C14.4226182,18.0061538 14.4239273,18.0233846 14.4245818,18.0406154 L14.7603636,21.9987692 L14.7682182,22.0867692 C14.8153455,22.3686154 15.0745455,22.5846154 15.3874182,22.5846154 L17.0421091,22.5846154 C17.3504,22.5846154 17.6069818,22.3753846 17.6593455,22.0996923 L17.6685091,21.9852308 L18.0042909,18.0344615 C18.0042909,18.0215385 18.0056,18.0086154 18.0075636,17.9963077 C18.0324364,17.8098462 18.1954182,17.6646154 18.3963636,17.6523077 C18.4048727,17.6516923 18.4140364,17.6516923 18.4232,17.6516923 C18.4317091,17.6516923 18.4408727,17.6516923 18.4500364,17.6523077 L18.6365818,17.6523077 L18.6365818,17.6516923 C18.9501091,17.6516923 19.2106182,17.4350769 19.2564364,17.152 L19.2577455,17.1452308 L19.2629818,17.0867692 L19.6282182,13.2812308 C19.6282182,12.7784615 19.1942545,12.3710769 18.6601455,12.3710769 Z M16.2139127,11.6006769 C17.3973309,11.6006769 18.35624,10.6985231 18.35624,9.58713846 C18.35624,8.47452308 17.3973309,7.57236923 16.2139127,7.57236923 C15.0304945,7.57236923 14.07224,8.47452308 14.07224,9.58713846 C14.07224,10.6985231 15.0304945,11.6006769 16.2139127,11.6006769 Z'></path>
+          </g>
+          <g class='circle circle3' transform='translate(601.000000, 135.000000)'>
+            <circle class='small' cx='16' cy='16' r='16'></circle>
+            <path class='person' d='M18.6601455,12.3710769 L13.7674182,12.3710769 C13.2333091,12.3710769 12.8,12.7784615 12.8,13.2812308 L13.1619636,17.0584615 L13.1724364,17.1723077 C13.2274182,17.4449231 13.4826909,17.6516923 13.7890182,17.6516923 L13.7890182,17.6523077 L13.9788364,17.6523077 C13.9873455,17.6516923 13.9965091,17.6516923 14.0056727,17.6516923 C14.0148364,17.6516923 14.0233455,17.6516923 14.0325091,17.6523077 C14.2308364,17.6646154 14.3918545,17.8061538 14.4193455,17.9889231 C14.4226182,18.0061538 14.4239273,18.0233846 14.4245818,18.0406154 L14.7603636,21.9987692 L14.7682182,22.0867692 C14.8153455,22.3686154 15.0745455,22.5846154 15.3874182,22.5846154 L17.0421091,22.5846154 C17.3504,22.5846154 17.6069818,22.3753846 17.6593455,22.0996923 L17.6685091,21.9852308 L18.0042909,18.0344615 C18.0042909,18.0215385 18.0056,18.0086154 18.0075636,17.9963077 C18.0324364,17.8098462 18.1954182,17.6646154 18.3963636,17.6523077 C18.4048727,17.6516923 18.4140364,17.6516923 18.4232,17.6516923 C18.4317091,17.6516923 18.4408727,17.6516923 18.4500364,17.6523077 L18.6365818,17.6523077 L18.6365818,17.6516923 C18.9501091,17.6516923 19.2106182,17.4350769 19.2564364,17.152 L19.2577455,17.1452308 L19.2629818,17.0867692 L19.6282182,13.2812308 C19.6282182,12.7784615 19.1942545,12.3710769 18.6601455,12.3710769 Z M16.2139127,11.6006769 C17.3973309,11.6006769 18.35624,10.6985231 18.35624,9.58713846 C18.35624,8.47452308 17.3973309,7.57236923 16.2139127,7.57236923 C15.0304945,7.57236923 14.07224,8.47452308 14.07224,9.58713846 C14.07224,10.6985231 15.0304945,11.6006769 16.2139127,11.6006769 Z'></path>
+          </g>
+          <g class='circle circle3' transform='translate(595.000000, 204.000000)'>
+            <circle class='small' cx='16' cy='16' r='16'></circle>
+            <path class='person' d='M18.6601455,12.3710769 L13.7674182,12.3710769 C13.2333091,12.3710769 12.8,12.7784615 12.8,13.2812308 L13.1619636,17.0584615 L13.1724364,17.1723077 C13.2274182,17.4449231 13.4826909,17.6516923 13.7890182,17.6516923 L13.7890182,17.6523077 L13.9788364,17.6523077 C13.9873455,17.6516923 13.9965091,17.6516923 14.0056727,17.6516923 C14.0148364,17.6516923 14.0233455,17.6516923 14.0325091,17.6523077 C14.2308364,17.6646154 14.3918545,17.8061538 14.4193455,17.9889231 C14.4226182,18.0061538 14.4239273,18.0233846 14.4245818,18.0406154 L14.7603636,21.9987692 L14.7682182,22.0867692 C14.8153455,22.3686154 15.0745455,22.5846154 15.3874182,22.5846154 L17.0421091,22.5846154 C17.3504,22.5846154 17.6069818,22.3753846 17.6593455,22.0996923 L17.6685091,21.9852308 L18.0042909,18.0344615 C18.0042909,18.0215385 18.0056,18.0086154 18.0075636,17.9963077 C18.0324364,17.8098462 18.1954182,17.6646154 18.3963636,17.6523077 C18.4048727,17.6516923 18.4140364,17.6516923 18.4232,17.6516923 C18.4317091,17.6516923 18.4408727,17.6516923 18.4500364,17.6523077 L18.6365818,17.6523077 L18.6365818,17.6516923 C18.9501091,17.6516923 19.2106182,17.4350769 19.2564364,17.152 L19.2577455,17.1452308 L19.2629818,17.0867692 L19.6282182,13.2812308 C19.6282182,12.7784615 19.1942545,12.3710769 18.6601455,12.3710769 Z M16.2139127,11.6006769 C17.3973309,11.6006769 18.35624,10.6985231 18.35624,9.58713846 C18.35624,8.47452308 17.3973309,7.57236923 16.2139127,7.57236923 C15.0304945,7.57236923 14.07224,8.47452308 14.07224,9.58713846 C14.07224,10.6985231 15.0304945,11.6006769 16.2139127,11.6006769 Z'></path>
+          </g>
+          <text fill='#888888' font-size='24' font-weight='260' letter-spacing='1'>
+            <tspan x='383' y='22'>MAKE</tspan>
+          </text>
+          <text fill='#888888' font-size='24' font-weight='260' letter-spacing='1'>
+            <tspan x='648' y='154'>USER TEST</tspan>
+          </text>
+          <text fill='#888888' font-size='24' font-weight='260' letter-spacing='1'>
+            <tspan x='438' y='342'>LEARN</tspan>
+          </text>
+          <text fill='#888888' font-size='24' font-weight='260' letter-spacing='1'>
+            <tspan x='54' y='401'>SHIP</tspan>
+          </text>
+          <text fill='#888888' font-size='24' font-weight='260' letter-spacing='1'>
+            <tspan x='0' y='87'>IDEA</tspan>
+          </text>
+        </svg>
+        <p class='center'>LabLabLab specializes in running small experiments using our talented & veteran product team to learn the most about what users want.  We leverage the best tools and frameworks to deliver a functional product to market quickly and de-risk your product launch.</p>
+      </div>
+      <div class='spacer'></div>
+    </div>
+    </script><script type="text/ng-template" id="home/tech.html"><div class='page' id='tech' sticky='root.stick($id)' use-placeholder>
+      <h3>Technologies used</h3>
+      <div class='tech'>
+        <div class='tech-item'>
+          <img src="images/tech/angularjs.png" />
+          <div class='tech-item-title'>AngularJS</div>
+        </div>
+        <div class='tech-item'>
+          <img src="images/tech/ember.png" />
+          <div class='tech-item-title'>Ember</div>
+        </div>
+        <div class='tech-item'>
+          <img src="images/tech/rails.png" />
+          <div class='tech-item-title'>Rails</div>
+        </div>
+        <div class='tech-item'>
+          <img src="images/tech/swift.png" />
+          <div class='tech-item-title'>Swift</div>
+        </div>
+        <div class='tech-item'>
+          <img src="images/tech/play.png" />
+          <div class='tech-item-title'>Scala</div>
+        </div>
+        <div class='tech-item'>
+          <img src="images/tech/intercom.png" />
+          <div class='tech-item-title'>Intercom</div>
+        </div>
+        <div class='tech-item'>
+          <img src="images/tech/mixpanel.png" />
+          <div class='tech-item-title'>Mixpanel</div>
+        </div>
+        <div class='tech-item'>
+          <img src="images/tech/typeform.png" />
+          <div class='tech-item-title'>Typeform</div>
+        </div>
+      </div>
+    </div>
+    </script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js" type="text/javascript"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js" type="text/javascript"></script>
+    <script src="http://www.parsecdn.com/js/parse-1.4.2.min.js" type="text/javascript"></script>
+    <script src="javascripts/lib/angular-ui-router.min.js" type="text/javascript"></script>
+    <script src="javascripts/main.js" type="text/javascript"></script>
+    <script src="javascripts/lib/smoothScroll.js" type="text/javascript"></script>
+    <script src="javascripts/scrollId.js" type="text/javascript"></script>
+    <script src="javascripts/toggleClass.js" type="text/javascript"></script>
+    <script src="javascripts/storybook.js" type="text/javascript"></script>
+    <script>
+      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
+  </body>
+</html>

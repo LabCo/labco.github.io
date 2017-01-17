@@ -1,0 +1,1 @@
+var ToggleClass;!function(l){function e(){return{restrict:"A",link:function(l,e,g){e.on("click",function(){e.toggleClass(g.toggleClass)})}}}l.Directive=e}(ToggleClass||(ToggleClass={})),angular.module("toggleClass",[]).directive("toggleClass",ToggleClass.Directive);

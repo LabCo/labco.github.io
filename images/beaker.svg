@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="337px" height="363px" viewBox="0 0 337 363" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3 (11970) - http://www.bohemiancoding.com/sketch -->
+    <title>beaker</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="50%" cy="0%" fx="50%" fy="0%" r="157.456429%" id="radialGradient-1">
+            <stop stop-color="#457E8F" offset="0%"></stop>
+            <stop stop-color="#485D7A" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="beaker" sketch:type="MSLayerGroup" transform="translate(-1.000000, 0.000000)">
+            <path d="M94.5089691,197.229796 C147.841023,205.810638 204.672612,213.503548 251.994717,216.579174 L322.309748,301.412551 C350.503677,335.427842 337.539236,363 293.355601,363 L45.6570018,363 C1.47893706,363 -12.2678666,334.79091 14.9650971,299.993234 L89.8339649,204.327459 C91.4602453,202.249434 93.0299562,199.850552 94.5089941,197.2298 Z" id="liquid" fill-opacity="0.5" fill="url(#radialGradient-1)" sketch:type="MSShapeGroup"></path>
+            <path d="M252.994717,216.579174 L242.110514,203.447648 C232.952409,192.398617 225.522187,171.790534 225.522187,157.427301 L225.522187,25 L234.425138,25 C241.322542,25 246.927623,19.4035594 246.927623,12.5 C246.927623,5.59492272 241.33007,0 234.425138,0 L97.9593212,0 C91.0619174,0 85.4568359,5.59644063 85.4568359,12.5 C85.4568359,19.4050773 91.0543892,25 97.9593212,25 L106.862272,25 L106.862272,157.83879 C106.862272,169.56053 102.080674,185.585246 95.5089943,197.2298 C148.841026,205.810639 205.672613,213.503548 252.994717,216.579174 Z" id="glass" stroke-opacity="0.368517889" stroke="#000000" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

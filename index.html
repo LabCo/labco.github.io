@@ -617,72 +617,7 @@
       </div>
     </div>
     <!-- = partial "partials/home/_blog.haml" -->
-    <div class='page' id='hire' scroll-id='p'>
-      <h1 class='page-header'>Work with us</h1>
-      <svg class='atom' fill-rule='evenodd' fill='rgba(255,255,255,.05)' viewBox='0 0 1145 1145' width='100px'>
-        <path d='M331.997502,711.625499 C470.068689,950.741977 689.897996,1082.29557 823,1005.45868 C956.102004,928.621792 952.073686,672.490979 814.002498,433.374501 C675.931311,194.258023 456.102004,62.7044253 323,139.541317 C189.897996,216.378208 193.926314,472.509021 331.997502,711.625499 L331.997502,711.625499 Z M366.791632,694.178591 C493.659329,913.892475 689.340223,1038.41454 803.857143,972.306418 C918.374062,906.198292 908.361779,674.493772 781.494082,454.779888 C654.626386,235.066005 458.945491,110.543935 344.428571,176.652061 C229.911652,242.760187 239.923935,474.464707 366.791632,694.178591 L366.791632,694.178591 Z'>
-          <!-- %animateTransform{ attributeName: "transform", type: "rotate", from: "0 572.5 572.5", to: "-360 572.5 572.5", dur: "4s", repeatCount: "indefinite", keySplines:"0 0.75 0.25 1", keyTimes: "0;0.8"} -->
-        </path>
-        <path d='M573,850.750998 C849.142375,850.750998 1073,726.173783 1073,572.5 C1073,418.826217 849.142375,294.249002 573,294.249002 C296.857625,294.249002 73,418.826217 73,572.5 C73,726.173783 296.857625,850.750998 573,850.750998 Z M575.285714,811.898703 C829.021108,811.898703 1034.71429,704.716253 1034.71429,572.5 C1034.71429,440.283747 829.021108,333.101297 575.285714,333.101297 C321.550321,333.101297 115.857143,440.283747 115.857143,572.5 C115.857143,704.716253 321.550321,811.898703 575.285714,811.898703 Z' stroke-width='11' stroke='#333'>
-          <!-- %animateTransform{ attributeName: "transform", type: "rotate", from: "0 572.5 572.5", to: "360 572.5 572.5", dur: "6s", repeatCount: "indefinite", keySplines:"0 0.75 0.25 1", keyTimes: "0;0.8"} -->
-        </path>
-        <path d='M814.002498,711.625499 C952.073686,472.509021 956.102004,216.378208 823,139.541317 C689.897996,62.7044253 470.068689,194.258023 331.997502,433.374501 C193.926314,672.490979 189.897996,928.621792 323,1005.45868 C456.102004,1082.29557 675.931311,950.741977 814.002498,711.625499 L814.002498,711.625499 Z M781.494082,690.220112 C908.361779,470.506228 918.374062,238.801708 803.857143,172.693582 C689.340223,106.585455 493.659329,231.107525 366.791632,450.821409 C239.923935,670.535293 229.911652,902.239813 344.428571,968.347939 C458.945491,1034.45607 654.626386,909.933995 781.494082,690.220112 L781.494082,690.220112 Z'>
-          <!-- %animateTransform{ attributeName: "transform", type: "rotate", from: "0 572.5 572.5", to: "360 572.5 572.5", dur: "4s", repeatCount: "indefinite", keySplines:"0 0.75 0.25 1", keyTimes: "0;0.8"} -->
-        </path>
-        <circle cx='573' cy='572.5' r='77'></circle>
-      </svg>
-      <form ng-controller='HireController as hire' ng-submit='hire.submit()'>
-        <label class='input' ng-class='{error: hire.error.name}'>
-          <input ng-class='{filled:hire.project.name}' ng-model='hire.project.name' type='text'>
-          <div class='label'>Name</div>
-        </label>
-        <label class='input' ng-class='{error: hire.error.email}'>
-          <input ng-class='{filled:hire.project.email}' ng-model='hire.project.email' type='text'>
-          <div class='label'>Email address</div>
-        </label>
-        <label class='input' ng-class='{error: hire.error.phone}'>
-          <input ng-class='{filled:hire.project.phone}' ng-model='hire.project.phone' type='text'>
-          <div class='label'>Telephone</div>
-        </label>
-        <div class='input' ng-class='{error: hire.error.projType}'>
-          <div class='error-label'>{{hire.error.projType}}</div>
-          <div class='checkbox-group'>
-            <label class='checkbox'>
-              <input type="checkbox" name="mobile" value="1" ng-model="hire.project.isMobile" />
-              <div class='checkbox-content'>
-                <img src="images/icons/mobile.png" />
-                <div class='text'>mobile</div>
-              </div>
-            </label>
-            <label class='checkbox'>
-              <input type="checkbox" name="web" value="1" ng-model="hire.project.isWeb" />
-              <div class='checkbox-content'>
-                <img src="images/icons/web.png" />
-                <div class='text'>web</div>
-              </div>
-            </label>
-          </div>
-        </div>
-        <label class='input' ng-class='{error: hire.error.desc}'>
-          <input ng-class='{filled:hire.project.desc}' ng-model='hire.project.desc' placeholder='' type='text'>
-          <div class='label'>Tell us about your project</div>
-        </label>
-        <label class='input' ng-class='{error: hire.error.budget}'>
-          <select ng-class='{filled:hire.project.budget}' ng-model='hire.project.budget'>
-            <option value='1'>I don't know yet</option>
-            <option value='2'>$25 - 55k</option>
-            <option value='2'>$55 - $85k</option>
-            <option value='3'>$85 - $175k</option>
-            <option value='4'>$175k+</option>
-          </select>
-          <div class='label'>Project Budget</div>
-        </label>
-        <p class='thankyou' ng-show='hire.thankYouMessageShow'>Thanks for signing up, we'll be in touch.</p>
-        <label class='input'>
-          <input type='submit' value='inquire'>
-        </label>
-      </form>
-    </div>
+    <!-- = partial "partials/home/_hire.haml" -->
     </script><script type="text/ng-template" id="inflight.html"><section>
       <div class='back-wrap'>
         <div class='back' ng-click='root.back()'>
